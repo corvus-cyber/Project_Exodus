@@ -1,0 +1,12 @@
+#house {
+	opacity: 5;
+	animation: flickerI 2s linear  reverse infinite;
+}
+#house::after {
+	content: '';
+	width: 150%;
+	-webkit-box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+	-moz-box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+	box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+}
+

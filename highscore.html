@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./public/assets/css/rpg-flicker.css" type="text/css"/>
+        <link rel="stylesheet" href="./public/assets/css/house-flicker.css" type="text/css" />
+        <link rel="stylesheet" href="./public/assets/css/style.css" type="text/css">
+
+		<title>Project_2</title>
+		<script src="https://code.jquery.com/jquery.js"></script>
+	</head>
+	<body>
+        <div class="container"> 
+            <!-- Title -->
+            <div class="row">
+                <div class="col-md-12">  
+                    <h1>
+                        <div class="Begin d-flex justify-content-center">
+                            <span id="E">E</span>
+                            <span id="X">X</span>
+                            <span id="O">O</span>
+                            <span id="D">D</span>
+                            <span id="U">U</span>
+                            <span id="S">S</span>
+                        </div>
+                    </h1>
+                </div>  
+            </div>
+            <!--High Score Display-->
+            <div class="row mb-5 mt-5 justify-content-center">
+                <div class="col-md-8 options">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Name</th>
+                            <th scope="col float-right">Number of Deaths</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row"></th>
+                            <td>Wyatt Hancock</td>
+                            <td>5</td>
+                          </tr>
+                          <tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            <!-- High Score Form -->
+            <div class="row mt-5 mb-5 d-flex justify-content-center">
+                <div class="col-md-6 submitform text-center">
+                    <form class="build-burgers">
+                        <input type="text" class="form control" name="high-score" id="log-score">
+                        <button type="submit" class="btn btn-dark button-styling" id="submit-score">Sign Death Certificate</button>
+                    </form>
+                </div>
+            </div>
+            <!--Return to RPG Button-->
+            <div class="row mt-5 mb-5 d-flex justify-content-center">
+                <div class="col-md-6 submitform text-center">            
+                        <button type="submit" class="btn btn-dark btn-lg button-styling" id="submit-score">Return To The Nightmare</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-center">
+                   <img src="./public/assets/favicon/inverse.png" class="img-fluid" id="house"> 
+                </div>
+            </div>
+        </div>  
+	</body>
+</html>

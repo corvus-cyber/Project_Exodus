@@ -1,3 +1,5 @@
-DROP DATABASE IF EXISTS exodus_scenario;
+-- Drops the todolist if it exists currently --
+DROP DATABASE IF EXISTS project_exodus;
 
-CREATE DATABASE exodus_scenario;
+-- Creates the "todolist" database --
+CREATE DATABASE project_exodus;

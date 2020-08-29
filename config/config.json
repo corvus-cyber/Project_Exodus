@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "exodus_scenarios",
+    "password": "",
+    "database": "project_exodus",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

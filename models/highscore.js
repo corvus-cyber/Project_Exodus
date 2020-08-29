@@ -1,24 +1,17 @@
-var Sequelize = require("sequelize");
-
-var sequelize = require("../config/config.json")
-
-// module.exports = function(sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
     var Highscore = sequelize.define("Highscore", {
       // The email cannot be null, and must be a proper email before creation
       username: {
-        type: Sequelize.STRING,
+        type: DataTypes.STRING,
         allowNull: false
       },
 
       score: {
-          type: Sequelize.INTEGER,
+          type: DataTypes.INTEGER,
         allowNull: false
       }
 
     });
 
-//   };
-  
-  Highscore.sync();
-
-  module.exports = Highscore;
+    return Highscore;
+  };

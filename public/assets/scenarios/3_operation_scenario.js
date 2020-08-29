@@ -1,5 +1,5 @@
-let scenario_2={
-    id: 2,
+let scenario_3={
+    id: 3,
     title: "Hallway",
     text: [
         "You find yourself in a long corridor, illuminated by several dim light bulbs lining the ceiling. Dark grey tiles stretch out in either direction. The portions of walls that aren’t rotted or peeling are covered in grotesque graffiti. The ceiling above is plastered with yellowed water stains. Several trays line the hallways along the walls. Bloody footprints form interweaving scarlet paths along the floor, including into the room behind you.",

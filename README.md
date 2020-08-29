@@ -18,5 +18,9 @@ Raj's connection test.
 
 
 
-CREDIT: 
+CREDITS: 
+Aakhya Signh for creating the typewriter css and js effect:
+[Link To Codepen](https://codepen.io/aakhya/pen/NErZry)
+Prathamesh Koshti for creating the LIGHT flickering animation: 
+[Link To Codepen](https://codepen.io/prathameshkoshti/pen/PVVRMG)
 

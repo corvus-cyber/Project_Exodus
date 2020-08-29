@@ -34,3 +34,5 @@ db.Highscore.create({
   username: "Raj",
   score: 10
 })
+
+// Fixing the password issue.

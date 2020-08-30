@@ -10,27 +10,28 @@ let scenario_1={
     ],
     options: [
         {
-            id: "option_1",
+            id: 1,
             title: "Look down and Examine Yourself",
             text: ["You look down to better gauge your physical state, and it becomes instantly clear why you ache so much. Your arms and legs are covered in stitches surrounding patches of skin that are clearly not your own. Some of them are light, others are dark. One patch on your right arm appears to be rotten and decaying."],
             killPlayer: false
         },
         {
-            id: "option_2:",
+            id: 2,
             title: "Grab the Bandages",
             text: ["It appears that some of your stitches are still seeping blood and plasma. You quickly grab the bandages on the table and wrap your wounds. Not the best job, but it’ll work for now."],
             killPlayer: false
         },
         {
-            id: "option_3",
+            id: 3,
             title: "Look Through the Journal",
             text: [""],
             killPlayer: false
         },
         {
-            id: "option_4",
+            id: 4,
             title: "Go Through the Door",
             text: [""],
             killPlayer: false
         }]
 };
+export default {scenario_1};

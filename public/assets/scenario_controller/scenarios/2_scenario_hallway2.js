@@ -36,3 +36,4 @@ let scenario_2={
             killPlayer: false
         }]
 };
+export default {scenario_2};

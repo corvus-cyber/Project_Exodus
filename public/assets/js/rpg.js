@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
 
-    console.log(ele)
+    //console.log(ele)
     $(ele).hide().appendTo(".description").each(function (i) {
         $(this).delay(50 * i).css({
             display: 'inline',

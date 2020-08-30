@@ -21,20 +21,45 @@ let optionVal = 0;
 scenarioOpti.addEventListener("click", renderScenario)
 
 function renderScenario() {
-    //clears any currently shown answer options before rendering new ones
+    //clears any currently shown answer and text options before rendering new ones
     $(scenarioOpti.children).remove();
 
+    //render options
     for (let i = 0; i < scenarios[scenarioVal].options.length; i++) {
-        let opt = `<button type="button" class="btn btn-dark button-styling">${scenarios[scenarioVal].options[i].title}</button>`
+        let opt = `<button data=${i} type="button" class="btn btn-dark button-styling">${scenarios[scenarioVal].options[i].title}</button>`
         scenarioOpti.insertAdjacentHTML("beforeend", opt);
     }
-    console.log(scenarioOpti.children);
+
+    for (let i = 0; i < scenarios[scenarioVal].options.length; i++) {
+        let opt = `<button data=${i} type="button" class="btn btn-dark button-styling">${scenarios[scenarioVal].options[i].title}</button>`
+        scenarioOpti.insertAdjacentHTML("beforeend", opt);
+    }
+
     scenarioOpti.addEventListener("click", function(event){
-   
-        console.log(event.target.textContent);
+
+        
+        let selectedOpt = event.target.getAttribute('data');
+        console.log(selectedOpt);
+
+
+        var content = event.target.textContent;
+
+        console.log(content)
+    
+        var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
+    
+        //console.log(ele)
+        $(ele).hide().appendTo(".description").each(function (i) {
+            $(this).delay(50 * i).css({
+                display: 'inline',
+                opacity: 0,
+            }).animate({
+                opacity: 1,
+                color: "white",
+            }, 100);
+        });
     });
 
-    
 
     // console.log(questionDescription.textContent = questions[whichQuestion].description)
 
@@ -47,12 +72,3 @@ function renderScenario() {
     //     questionLocation.appendChild(answerOptions);
     // }
 };
-
-
-function optionSelect(a) {
-    console.log(a)
-}
-
-
-
-

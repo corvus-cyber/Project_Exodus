@@ -61,15 +61,15 @@ body{
   stroke: currentColor;
 }
 
-.base-timer__path-remaining.green {
+.base-timer__path-remaining.white {
   color: white;
 }
 
-.base-timer__path-remaining.orange {
+.base-timer__path-remaining.lightgrey {
   color: 	#F5F5F5;
 }
 
-.base-timer__path-remaining.red {
+.base-timer__path-remaining.grey {
   color: 	#C0C0C0;
 }
 
@@ -82,4 +82,5 @@ body{
   align-items: center;
   justify-content: center;
   font-size: 35px;
+  color: white;
 }

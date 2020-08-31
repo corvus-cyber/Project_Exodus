@@ -139,4 +139,5 @@ $(document).ready(function() {
         .getElementById("base-timer-path-remaining")
         .setAttribute("stroke-dasharray", circleDasharray);
     }
+
 })

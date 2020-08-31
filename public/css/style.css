@@ -15,7 +15,7 @@ body{
 }
 
 /* change cursor to hand hover effect */
-span { 
+.exodus span { 
   cursor: pointer
 }
 

@@ -26,26 +26,19 @@ function renderScenario() {
     
     //render options
     for (let i = 0; i < scenarios[scenarioVal].options.length; i++) {
-        let opt = `<button data=${i} type="button" class="btn btn-dark button-styling">${scenarios[scenarioVal].options[i].title}</button>`
+        //renders the title of the option and sets data value to that options v
+        let opt = `<button data=${i} type="button" class="btn btn-dark button-styling">${scenarios[scenarioVal].options[i].title} </button>`
         scenarioOpti.insertAdjacentHTML("beforeend", opt);
     }
 
+    //listen to options
     scenarioOpti.addEventListener("click", function(event){
-
+        //remove options
         $(scenarioDesc.children).remove();
-
+        //
         let selectedOpt = parseInt(event.target.getAttribute('data'));
         optionVal = selectedOpt
-        console.log(optionVal);
-        
-
-        console.log(scenarios[scenarioVal].text[1])
-    
-        
-    
-        //console.log(ele)
-   
-
+        console.log("optval "+optionVal);
 
         for (let i = 0; i < scenarios[scenarioVal].text.length; i++) {
             var content = scenarios[scenarioVal].text[i];
@@ -61,9 +54,11 @@ function renderScenario() {
                     color: "white",
                 }, 100);
             });
-
-
         }
+
+
+        scenarioVal = scenarios[scenarioVal].options
+        console.log["scenval"+scenarioVal]
         
     });
 

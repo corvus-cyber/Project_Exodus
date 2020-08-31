@@ -24,10 +24,15 @@ var routes = require("./routes/html-routes.js");
 app.use(routes);
 //require("./routes/api-routes.js")(app);
 
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
+// db.sequelize.sync().then(function() {
+//   app.listen(PORT, function() {
+//     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+//   });
+// });
+
+db.sequelize.sync()
+app.listen(PORT, function() {
     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-  });
 });
 
 db.Highscore.create({

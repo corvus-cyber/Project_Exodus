@@ -1,0 +1,86 @@
+.img-fluid{
+    max-width: 8%;
+}
+
+body{
+    background-color: black;
+}
+
+
+.button-styling{
+  background-color: black;
+  border-color: black;
+  box-shadow: 0 0 7px;
+  font-family: Montserrat;
+}
+
+/* change cursor to hand hover effect */
+.exodus span { 
+  cursor: pointer
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+.description {
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 20px;
+  font-weight: bold;
+  width: 400px;
+  color: white;
+  letter-spacing: normal;
+}
+
+
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: black;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.white {
+  color: white;
+}
+
+.base-timer__path-remaining.lightgrey {
+  color: 	#F5F5F5;
+}
+
+.base-timer__path-remaining.grey {
+  color: 	#C0C0C0;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  color: white;
+}

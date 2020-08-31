@@ -23,4 +23,6 @@ CREDITS:
     - [Link To Codepen](https://codepen.io/aakhya/pen/NErZry)
 * Prathamesh Koshti for creating the LIGHT flickering animation: 
     - [Link To Codepen](https://codepen.io/prathameshkoshti/pen/PVVRMG)
+* Mateusz Rybczonec and Geoff Graham for creating the Timer Animation:
+    - [Link to Codepen](https://codepen.io/geoffgraham/pen/yLywVbW)
 

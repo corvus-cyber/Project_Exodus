@@ -9,6 +9,7 @@
 		<title>Exodus</title>
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="js/rpg.js"></script>
+        <script type="module" src="./scenario_controller/scenario_controller.js"></script>
 	</head>
 	<body>
         <div class="container"> 
@@ -28,8 +29,8 @@
                 </div>  
             </div>
             <!-- Story Display -->
-            <div id="scDesc" class="row mt-5 mb-2">
-                <div class="col-md-12 story text-center description">
+            <div class="row mt-5">
+                <div id="scDesc" class="col-md-12 story text-center description">
                     
                 </div>
             </div>
@@ -40,8 +41,8 @@
             </div>
             
             <!--Option Buttons-->
-            <div id="scOpt" class="row mb-5 mt-5">
-                <div class="col-md-12 options d-flex justify-content-center">
+            <div class="row mb-5 mt-5">
+                <div id="scOpt" class="col-md-12 options d-flex justify-content-center">
                     <button type="button" class="btn btn-dark button-styling">Dare To Open The Door</button>
                 </div>
             </div>
@@ -51,6 +52,7 @@
                 </div>
             </div>
         </div> 
-        <script src="/js/scenario_controller.js"></script>
+        
+
 	</body>
 </html>

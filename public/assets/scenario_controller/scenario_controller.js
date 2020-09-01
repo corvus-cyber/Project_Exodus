@@ -6,12 +6,10 @@ import scenario_3 from "./scenarios/3_operation_scenario.js"
 //Due to a quirk in the way the import works with us accessing the data you need to follow the schema below for pushing objects
 let scenarios = [];
 scenarios.push(scenario_1.scenario_1, scenario_2.scenario_2, scenario_3.scenario_3);
-
+console.log(scenarios);
 //-------------------global variables-------------------
 let scenarioDesc = document.getElementById("scDesc")
 let scenarioOpti = document.getElementById("scOpt")
-
-console.log(scenarios);
 
 let scenarioVal = 0;
 let optionVal = 0;
@@ -19,7 +17,6 @@ let optionVal = 0;
 
 //-------------------delivery  system-----------------
 scenarioOpti.addEventListener("click", renderScenario)
-
 function renderScenario() {
     //clears any currently shown answer and text options before rendering new ones
     $(scenarioOpti.children).remove();
@@ -38,17 +35,18 @@ function renderScenario() {
         //get the value of which option was selected
         let selectedOpt = parseInt(event.target.getAttribute('data'));
         optionVal = selectedOpt
+        console.log(scenarios[scenarioVal].options[1].text[0]);
 
         //prepares the content variable
         let content;
         //without this the content will start with "undefined"
         content = "";
     
-        
-        //render 
-        for (let i = 0; i < scenarios[scenarioVal].text.length; i++) {  
-                content += scenarios[scenarioVal].text[i]+" ";
-                console.log(content);
+        scenarioVal = scenarios[scenarioVal].options[optionVal].toScenario
+        console.log("scenval"+scenarioVal)
+        //render option text
+        for (let i = 0; i < scenarios[scenarioVal].options[optionVal].text.length; i++) {  
+                content += scenarios[scenarioVal].options[optionVal].text[i]+" ";
         }
 
         var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
@@ -62,9 +60,8 @@ function renderScenario() {
                 color: "white",
             }, 100);
         });
-        scenarioVal = "asdfasdf";//scenarios[scenarioVal].options
-        console.log["scenval"+scenarioVal]
-        return
+
+        return renderScenario()
         
     });
 

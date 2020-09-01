@@ -35,30 +35,36 @@ function renderScenario() {
     scenarioOpti.addEventListener("click", function(event){
         //remove options
         $(scenarioDesc.children).remove();
-        //
+        //get the value of which option was selected
         let selectedOpt = parseInt(event.target.getAttribute('data'));
         optionVal = selectedOpt
-        console.log("optval "+optionVal);
 
-        for (let i = 0; i < scenarios[scenarioVal].text.length; i++) {
-            var content = scenarios[scenarioVal].text[i];
-
-            var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
-
-            $(ele).hide().appendTo(".description").each(function (i) {
-                $(this).delay(50 * i).css({
-                    display: 'inline',
-                    opacity: 0,
-                }).animate({
-                    opacity: 1,
-                    color: "white",
-                }, 100);
-            });
+        //prepares the content variable
+        let content;
+        //without this the content will start with "undefined"
+        content = "";
+    
+        
+        //render 
+        for (let i = 0; i < scenarios[scenarioVal].text.length; i++) {  
+                content += scenarios[scenarioVal].text[i]+" ";
+                console.log(content);
         }
 
+        var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
 
-        scenarioVal = scenarios[scenarioVal].options
+        $(ele).hide().appendTo(".description").each(function (i) {
+            $(this).delay(50 * i).css({
+                display: 'inline',
+                opacity: 0,
+            }).animate({
+                opacity: 1,
+                color: "white",
+            }, 100);
+        });
+        scenarioVal = "asdfasdf";//scenarios[scenarioVal].options
         console.log["scenval"+scenarioVal]
+        return
         
     });
 

@@ -32,14 +32,14 @@ $(document).ready(function() {
 
     const COLOR_CODES = {
     info: {
-        color: "green"
+        color: "white"
     },
     warning: {
-        color: "orange",
+        color: "#F5F5F5",
         threshold: WARNING_THRESHOLD
     },
     alert: {
-        color: "red",
+        color: "#C0C0C0",
         threshold: ALERT_THRESHOLD
     }
     };
@@ -104,7 +104,7 @@ $(document).ready(function() {
         seconds = `0${seconds}`;
     }
 
-    return `${minutes}:${seconds}`;
+    return `${seconds}`;
     }
 
     function setRemainingPathColor(timeLeft) {

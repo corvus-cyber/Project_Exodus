@@ -18,6 +18,8 @@ let optionVal = 0;
 //-------------------delivery  system-----------------
 scenarioOpti.addEventListener("click", renderScenario)
 function renderScenario() {
+    
+    console.log(scenarios[scenarioVal].options); 
     //clears any currently shown answer and text options before rendering new ones
     $(scenarioOpti.children).remove();
     
@@ -35,7 +37,7 @@ function renderScenario() {
         //get the value of which option was selected
         let selectedOpt = parseInt(event.target.getAttribute('data'));
         optionVal = selectedOpt
-        console.log(scenarios[scenarioVal].options[1].text[0]);
+        //console.log(scenarios[scenarioVal].options[1].text[0]);
 
         //prepares the content variable
         let content;
@@ -43,7 +45,8 @@ function renderScenario() {
         content = "";
     
         scenarioVal = scenarios[scenarioVal].options[optionVal].toScenario
-        console.log("scenval"+scenarioVal)
+        //console.log("scenval"+scenarioVal)
+
         //render option text
         for (let i = 0; i < scenarios[scenarioVal].options[optionVal].text.length; i++) {  
                 content += scenarios[scenarioVal].options[optionVal].text[i]+" ";
@@ -60,6 +63,15 @@ function renderScenario() {
                 color: "white",
             }, 100);
         });
+
+
+        
+        //delete scenarios[scenarioVal].options[optionVal]
+        if (scenarios[scenarioVal].options[optionVal].actions.includes("selfDestruct")) {
+            console.log("destruction!!!!!");
+            scenarios[scenarioVal].options.splice(optionVal)
+        }
+        console.log(scenarios[scenarioVal].options);
 
         return renderScenario()
         

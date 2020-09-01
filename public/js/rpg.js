@@ -5,6 +5,13 @@ $(document).ready(function() {
         return false;
     });
 
+    // This is to add a new audio and a simple event listener to activate it
+    var heartBeat = new Audio ("/assets/sounds/heartbeat.mp3");
+
+    $(".btn").click(function(){
+        heartBeat.play();
+    });
+
 
 
     var content = "You awake in a cold dimly lit room, damp sweat coating your clammy skin. The air is tight in your chest, you struggle to gain a sense of your surroundings. How did you end up here? This isn't your bedroom, and the rank pile of rags you find yourself lying on is certainly not your bed. Fear clamps over your throat. That is when you begin the notice the pain in your abdomen..."
@@ -140,4 +147,5 @@ $(document).ready(function() {
         .setAttribute("stroke-dasharray", circleDasharray);
     }
 
-})
+});
+

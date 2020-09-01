@@ -84,3 +84,10 @@ body{
   font-size: 35px;
   color: white;
 }
+
+footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+};

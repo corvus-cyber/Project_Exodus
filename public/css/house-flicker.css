@@ -1,3 +1,5 @@
+/* CODE TO STYLE THE LOGO WITH A FLICKER EFFECT */
+
 #house {
 	opacity: .5;
 	animation: flickerI 3s linear  reverse infinite;

@@ -5,6 +5,13 @@ $(document).ready(function() {
         return false;
     });
 
+    // This is to add a new audio and a simple event listener to activate it
+    var heartBeat = new Audio ("/assets/sounds/heartbeat.mp3");
+
+    $(".btn").click(function(){
+        heartBeat.play();
+    });
+
 
 
     var content = "You awake in a cold dimly lit room, damp sweat coating your clammy skin. The air is tight in your chest, you struggle to gain a sense of your surroundings. How did you end up here? This isn't your bedroom, and the rank pile of rags you find yourself lying on is certainly not your bed. Fear clamps over your throat. That is when you begin the notice the pain in your abdomen..."
@@ -13,7 +20,7 @@ $(document).ready(function() {
 
     var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
 
-    console.log(ele)
+    //console.log(ele)
     $(ele).hide().appendTo(".description").each(function (i) {
         $(this).delay(50 * i).css({
             display: 'inline',
@@ -32,14 +39,14 @@ $(document).ready(function() {
 
     const COLOR_CODES = {
     info: {
-        color: "green"
+        color: "white"
     },
     warning: {
-        color: "orange",
+        color: "#F5F5F5",
         threshold: WARNING_THRESHOLD
     },
     alert: {
-        color: "red",
+        color: "#C0C0C0",
         threshold: ALERT_THRESHOLD
     }
     };
@@ -104,7 +111,7 @@ $(document).ready(function() {
         seconds = `0${seconds}`;
     }
 
-    return `${minutes}:${seconds}`;
+    return `${seconds}`;
     }
 
     function setRemainingPathColor(timeLeft) {
@@ -140,4 +147,5 @@ $(document).ready(function() {
         .setAttribute("stroke-dasharray", circleDasharray);
     }
 
-})
+});
+

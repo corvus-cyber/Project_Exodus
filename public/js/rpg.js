@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 
 
-    var content = "You awake in a cold dimly lit room, damp sweat coating your clammy skin. The air is tight in your chest, you struggle to gain a sense of your surroundings. How did you end up here? This isn't your bedroom, and the rank pile of rags you find yourself lying on is certainly not your bed. Fear clamps over your throat. That is when you begin the notice the pain in your abdomen..."
+    var content = "Welcome to EXODUS, Team Undefined's venture into choose-your-own-adventure, with a sinister twist. While delving into the nightmare, make your choices carefully; the consequences can be dire. Best of Luck."
 
     console.log(content)
 
@@ -32,14 +32,14 @@ $(document).ready(function() {
 
     const COLOR_CODES = {
     info: {
-        color: "green"
+        color: "white"
     },
     warning: {
-        color: "orange",
+        color: "#F5F5F5",
         threshold: WARNING_THRESHOLD
     },
     alert: {
-        color: "red",
+        color: "#C0C0C0",
         threshold: ALERT_THRESHOLD
     }
     };
@@ -104,7 +104,7 @@ $(document).ready(function() {
         seconds = `0${seconds}`;
     }
 
-    return `${minutes}:${seconds}`;
+    return `${seconds}`;
     }
 
     function setRemainingPathColor(timeLeft) {

@@ -2,41 +2,34 @@ let scenario_2={
     id: 2,
     title: "",
     text: [
-        "The first thing you notice when you awaken is a deep, aching pain throughout your entire body. Your head throbs painfully, as though it were being squeezed in a vice grip. You look down and notice that all you are wearing is a soiled hospital gown, covered with stains from God knows what. You are lying on some kind of hospital bed that’s been stained with blood, some of it fresh.",
-        "Slowly, you lift yourself to an upright sitting position. A soft, cold breeze whistles through the cracks of a boarded window behind you.",
-        "A single flickering light faintly illuminates the room. The white paint on the walls is peeling, and the parts that aren’t are covered in graffiti. Pools of dark ichor cover the floor, faintly reflecting the light above. Several  syringes lie scattered across the floor, some of them partially filled with unknown liquids.",
-        "You slowly slide off the bed onto your feet. The cold tiles beneath you send a shiver up your spine. You can’t remember anything about how you got here or who you even are. You quickly scan the room for anything of use. Beside you resting on a rusted metal table is what appears to be an open journal of some kind, as well as what seem to be several rolls of bandages. A solitary metal door stands across the room from you.",
+        "You find yourself in a long corridor, illuminated by several dim light bulbs lining the ceiling. Dark grey tiles stretch out in either direction. The portions of walls that aren’t rotted or peeling are covered in grotesque graffiti. The ceiling above is plastered with yellowed water stains. Several trays line the hallways along the walls. Bloody footprints form interweaving scarlet paths along the floor, including into the room behind you.",
+        "Before you, a darkened hallway stretches before you. You can barely make out a door on the opposite end of the hallway. A broken exit sign hangs from the top of the doorway.",
+        "Down the hallway to your right stands a wooden door with a tarnished plaque that you can’t quite make out at this distance, although it looks like it might be an office of some sort. This hallway appears better lit than other parts of the facility you’ve seen.",
+        "Down the hallway to your left is a door partly ajar that reads “Operation”. A cold, white light pours through the doorway You can hear whimpering coming from this direction...It almost sounds like...a dog?",
         "What do you do?"
     ],
     options: [
         {
             id: 1,
-            title: "testscen2e Yourself",
-            text: ["You look down to better gauge your physical state, and it becomes instantly clear why you ache so much. Your arms and legs are covered in stitches surrounding patches of skin that are clearly not your own. Some of them are light, others are dark. One patch on your right arm appears to be rotten and decaying."],
+            title: "Open the Door Ahead of You",
+            text: ["You approach the exit door. The door is locked, and you clearly don’t have the strength to force it. You’ll need to find the key."],
             actions:[],
             toScenario: 1
         },
         {
             id: 2,
-            title: "testscen2",           
-            text: ["It appears that some of your stitches are still seeping blood and plasma. You quickly grab the bandages on the table and wrap your wounds. Not the best job, but it’ll work for now."],
-            actions:["selfDestruct",
-            ],
+            title: "Enter Operation Room",           
+            text: [""],
+            actions:[            ],
             toScenario: 1
         },
         {
             id: 3,
-            title: "testscen2rnal",
+            title: "Enter the Office",
             text: [""],
             actions:[],
             toScenario: 1
         },
-        {
-            id: 4,
-            title: "testscen2",
-            text: [""],
-            actions:[],
-            toScenario: 1
-        }]
+        ]
 };
 export default {scenario_2};

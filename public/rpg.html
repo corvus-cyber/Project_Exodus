@@ -6,10 +6,10 @@
         <link rel="stylesheet" href="/css/house-flicker.css" type="text/css" />
         <link rel="stylesheet" href="/css/style.css" type="text/css">
 
-		<title>Exodus</title>
+        <title>Exodus</title>
         <script src="https://code.jquery.com/jquery.js"></script>
+        <script type="module" src="./assets/scenario_controller/scenario_controller.js"></script>
         <script src="js/rpg.js"></script>
-        <script type="module" src="./scenario_controller/scenario_controller.js"></script>
 	</head>
 	<body>
         <div class="container"> 
@@ -36,14 +36,15 @@
             </div>
             <!-- Timer Display -->
             <div class= "row mt-2">
-                <div class="col-md-12 d-flex justify-content-center" id="app">
+                <!-- Timer is on a display none with id class evaporate. Remove id to have the timer display -->
+                <div class="col-md-12 d-flex justify-content-center" id="app evaporate">
                 </div>
             </div>
             
             <!--Option Buttons-->
-            <div class="row mb-5 mt-5">
-                <div id="scOpt" class="col-md-12 options d-flex justify-content-center">
-                    <button type="button" class="btn btn-dark button-styling">Dare To Open The Door</button>
+            <div class="row mb-5 mt-5 ">
+                <div id="scOpt" class="col-md-12  options d-flex justify-content-center">
+                    <button type="button" class="btn btn-dark button-styling">Dare To Enter The Nightmare</button>
                 </div>
             </div>
             <div class="row">
@@ -52,7 +53,12 @@
                 </div>
             </div>
         </div> 
+        <!-- Sound controller -->
+        <footer>
+            <div class="text-center">
+                <audio controls loop autoplay="true" id="backgroundMusic">    <source src="/assets/sounds/Come-Play-With-Me.mp3"> </audio>
+            </div>
+          </footer>
         
-
 	</body>
 </html>

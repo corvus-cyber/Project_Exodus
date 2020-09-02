@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/rpg-flicker.css" type="text/css"/>
-        <link rel="stylesheet" href="css/house-flicker.css" type="text/css" />
-        <link rel="stylesheet" href="css/style.css" type="text/css">
-
-		<title>Project_2</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-	</head>
-	<body>
         <div class="container"> 
             <!-- Title -->
             <div class="row">
                 <div class="col-md-12">  
                     <h1>
-                        <div class="Begin d-flex justify-content-center">
+                        <div class="d-flex justify-content-center">
                             <span id="E">E</span>
                             <span id="X">X</span>
                             <span id="O">O</span>
@@ -26,7 +14,6 @@
                     </h1>
                 </div>  
             </div>
-            
             <!--High Score Display-->
             <div class="row mb-5 mt-5 justify-content-center">
                 <div class="col-md-8 options">
@@ -39,11 +26,13 @@
                           </tr>
                         </thead>
                         <tbody>
+                            {{#each highscore_data}}
                           <tr>
                             <th scope="row"></th>
-                            <td>Wyatt Hancock</td>
-                            <td>5</td>
+                            <td>{{username}}</td>
+                            <td>{{score}}</td>
                           </tr>
+                          {{/each}}
                         </tbody>
                       </table>
                 </div>
@@ -69,5 +58,3 @@
                 </div>
             </div>
         </div>  
-	</body>
-</html>

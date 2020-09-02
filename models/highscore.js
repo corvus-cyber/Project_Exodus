@@ -1,6 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
     var Highscore = sequelize.define("Highscore", {
-      // The email cannot be null, and must be a proper email before creation
       username: {
         type: DataTypes.STRING,
         allowNull: false
@@ -10,8 +9,8 @@ module.exports = function(sequelize, DataTypes) {
           type: DataTypes.INTEGER,
         allowNull: false
       }
-
-    });
-
+    }
+    );
+    // Highscore.sync({force: true});
     return Highscore;
   };

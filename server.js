@@ -30,12 +30,17 @@ app.use(routes);
 //   });
 // });
 
-db.sequelize.sync()
+db.sequelize.sync();
 app.listen(PORT, function() {
     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
 });
 
-db.Highscore.create({
-  username: "Raj",
-  score: 10
-})
+// db.Highscore.create({
+//   username: "Raj",
+//   score: 10
+// })
+
+// db.Highscore.create({
+//   username: "Wyatt Hancock",
+//   score: 5
+// })

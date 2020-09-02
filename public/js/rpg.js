@@ -23,7 +23,41 @@ $(document).ready(function() {
             color: "white",
         }, 100);
     });
+     //TIMER THAT WILL MAKE IMAGES FADE IN AND FADE OUT
+     function runDoorFade(){
+        $(".door").removeClass("evaporate")
+        $(".door").addClass("fade-in");
+        function fadeOut() {
+            setTimeout(function () {
+                $(".door").removeClass("fade-in");
+                $(".door").addClass("fade-out");
+                setTimeout(function(){
+                    $(".door").addClass("evaporate");
+                    $(".door").removeClass("fade-out");
+                }, 8000);
+            }, 10000)};
+        fadeOut();    
+    };
 
+    function runDeathFade(){
+        $(".death").removeClass("evaporate")
+        $(".death").addClass("fade-in");
+        function fadeOut() {
+            setTimeout(function () {
+                $(".death").removeClass("fade-in");
+                $(".death").addClass("fade-out");
+                setTimeout(function(){
+                    $(".death").addClass("evaporate");
+                    $(".death").removeClass("fade-out");
+                }, 8000);
+            }, 10000)};
+        fadeOut();    
+    };
+        
+
+    runDoorFade();
+    runDeathFade();
+    
     // Code used to make the timer occur 
 
     const FULL_DASH_ARRAY = 283;
@@ -142,39 +176,6 @@ $(document).ready(function() {
 
 
     
-    //TIMER THAT WILL MAKE IMAGES FADE IN AND FADE OUT
-    function runDoorFade(){
-        $(".door").removeClass("evaporate")
-        $(".door").addClass("fade-in");
-        function fadeOut() {
-            setTimeout(function () {
-                $(".door").removeClass("fade-in");
-                $(".door").addClass("fade-out");
-                setTimeout(function(){
-                    $(".door").addClass("evaporate");
-                    $(".door").removeClass("fade-out");
-                }, 8000);
-            }, 10000)};
-        fadeOut();    
-    };
-
-    function runDeathFade(){
-        $(".death").removeClass("evaporate")
-        $(".death").addClass("fade-in");
-        function fadeOut() {
-            setTimeout(function () {
-                $(".death").removeClass("fade-in");
-                $(".death").addClass("fade-out");
-                setTimeout(function(){
-                    $(".death").addClass("evaporate");
-                    $(".death").removeClass("fade-out");
-                }, 8000);
-            }, 10000)};
-        fadeOut();    
-    };
-        
-
-    runDoorFade();
-    runDeathFade();
+   
 
 })

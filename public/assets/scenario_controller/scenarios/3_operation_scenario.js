@@ -2,10 +2,11 @@ let scenario_3={
     id: 3,
     title: "",
     text: [
-        "The first thing you notice when you awaken is a deep, aching pain throughout your entire body. Your head throbs painfully, as though it were being squeezed in a vice grip. You look down and notice that all you are wearing is a soiled hospital gown, covered with stains from God knows what. You are lying on some kind of hospital bed that’s been stained with blood, some of it fresh.",
-        "Slowly, you lift yourself to an upright sitting position. A soft, cold breeze whistles through the cracks of a boarded window behind you.",
-        "A single flickering light faintly illuminates the room. The white paint on the walls is peeling, and the parts that aren’t are covered in graffiti. Pools of dark ichor cover the floor, faintly reflecting the light above. Several  syringes lie scattered across the floor, some of them partially filled with unknown liquids.",
-        "You slowly slide off the bed onto your feet. The cold tiles beneath you send a shiver up your spine. You can’t remember anything about how you got here or who you even are. You quickly scan the room for anything of use. Beside you resting on a rusted metal table is what appears to be an open journal of some kind, as well as what seem to be several rolls of bandages. A solitary metal door stands across the room from you.",
+        "The door is just wide enough for you to squeeze through without making much sound, but as you step into something cold and wet, you quickly wish you hadn’t. The entire floor is covered with spatterings of blood and bile, almost as if someone had tried to make a Jackson Pollock painting on the floor.",
+        "The only light in the room flows from the surgical light apparatus shining down upon the operating room table, illuminating what looks to be a large white and brown dog. It’s side has been sliced open, its flesh held open by skinny hooks, while numerous colored tubs stretch from large whirring machines, connecting to various parts of the dog’s insides.",
+        "Standing above the dog is what appears to be a doctor, bent over the operating table rummaging through the dog’s insides. His back is turned towards you as he is completely focused on his work. The dog manages to look up at the doctor, it’s eyes pleading. Your heart skips a beat as the dog opens its mouth….and begins to speak.",
+        '“Da---ddy….It Hurts…”',
+        '“Now, now, Nina,” the doctor said in hushed, caring tones, “We’ll make you better yet. Trust Daddy.”',
         "What do you do?"
     ],
     options: [

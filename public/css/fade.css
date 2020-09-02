@@ -1,4 +1,13 @@
 /* CODE TO HAVE IMAGE FADE IN */
+
+.death{
+    max-width: 50%;
+}
+
+.door{
+    max-width: 50%;
+}
+
 .fade-in {
     animation: fadeIn ease 7s;
     -webkit-animation: fadeIn ease 7s;

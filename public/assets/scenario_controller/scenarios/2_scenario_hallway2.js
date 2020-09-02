@@ -20,8 +20,7 @@ let scenario_2={
             id: 2,
             title: "Enter Operation Room",           
             text: [""],
-            actions:["selfDestruct",
-            ],
+            actions:[            ],
             toScenario: 1
         },
         {
@@ -31,12 +30,6 @@ let scenario_2={
             actions:[],
             toScenario: 1
         },
-        {
-            id: 4,
-            title: "testscen2",
-            text: [""],
-            actions:[],
-            toScenario: 1
-        }]
+        ]
 };
 export default {scenario_2};

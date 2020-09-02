@@ -14,7 +14,7 @@ let scenario_1={
             title: "Look down and Examine Yourself",
             text: ["You look down to better gauge your physical state, and it becomes instantly clear why you ache so much. Your arms and legs are covered in stitches surrounding patches of skin that are clearly not your own. Some of them are light, others are dark. One patch on your right arm appears to be rotten and decaying."],
             actions:[],
-            toScenario: 1
+            toScenario: 0
         },
         {
             id: 2,
@@ -29,7 +29,7 @@ let scenario_1={
             title: "Look Through the Journal",
             text: [""],
             actions:[],
-            toScenario: 1
+            toScenario: 0
         },
         {
             id: 4,

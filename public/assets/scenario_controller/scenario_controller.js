@@ -17,32 +17,38 @@ let optionVal =0;
 let selectedOpt =0;
 
 
-let deathCounter = 0;
+// let deathCounter = 0;
 
-// $("#submit-score").on("click", function(event){
+$("#submit-score").on("click", function(event){
+
     
-//     event.preventDefault();
-//     console.log(deathCounter);
-//     const newUser = {
-//         username: $("#log-score").val().trim(),
-//         score: deathCounter
-//     };
+    event.preventDefault();
+
+    //manually set local storage "death" value to 0
+
+    // console.log(deathCounter);
+    const newUser = {
+        username: $("#log-score").val().trim(),
+        score: deathCounter
+    };
     
-//     $.ajax("/highscore", {
-//         type: "POST",
-//         data: newUser
-//     }).then(
-//         function(){
-//             console.log("new user created")
-//             location.reload();
-//         }
-//     )
-// });
+    $.ajax("/highscore", {
+        type: "POST",
+        data: newUser
+    }).then(
+        function(){
+            console.log("new user created")
+            location.reload();
+        }
+    )
+});
 
 function updateDeath(){
-    deathCounter += 1;
-    console.log(deathCounter);
-    localStorage.setItem("death",+ 1)
+    let deathCounter;
+    //manually set local storage "death" value to 0 in the submit event listener
+    //deathCounter holds the value to what's in local storage, localStorage.getItem
+    // add 1 to deathCounter
+    localStorage.setItem("death", deathCounter)
 }
 
 

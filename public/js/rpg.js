@@ -140,4 +140,18 @@ $(document).ready(function() {
         .setAttribute("stroke-dasharray", circleDasharray);
     }
 
+    runFade();
+    //SET INTERVAL THAT WILL Add Class 
+    function runFade(){
+        $(".door").removeClass("evaporate")
+        $(".door").addClass("fade-in");
+        function fadeOut() {
+            setTimeout(function () {
+                $(".door").removeClass("fade-in");
+                $(".door").addClass("fade-out");
+            }, 10000);
+        };
+        fadeOut();
+    };
+
 })

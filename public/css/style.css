@@ -2,6 +2,10 @@
   display: none;
 }
 
+.evaporate{
+  display: none;
+}
+
 .img-fluid{
     max-width: 8%;
 }

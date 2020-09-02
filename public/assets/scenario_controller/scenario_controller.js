@@ -13,27 +13,33 @@ let scenarioOpti = document.getElementById("scOpt")
 
 let scenarioVal = 0;
 let currentScen;
-let optionVal = 0;
-let selectedOpt = 0;
+let optionVal =0;
+let selectedOpt =0;
 
 
 //-------------------delivery  system-----------------
 scenarioOpti.addEventListener("click", renderScenarioOpt);
 function renderScenarioOpt() {
 
-
+    selectedOpt = parseInt(event.target.getAttribute('data'));
+    optionVal = selectedOpt
+    scenarioVal = scenarios[scenarioVal].options[optionVal].toScenario
+        
+    console.log(selectedOpt);
     //if same, rerender options
     if (currentScen === scenarioVal) {
         console.log("Same");
-        console.log(scenarioVal);
+        console.log(currentScen+"current");
+        console.log(scenarioVal+"scen val");
+
         //clears any currently shown answer and text options before rendering new ones
         $(scenarioOpti.children).remove();
         console.log("Buttons Removed");
-        selectedOpt = parseInt(event.target.getAttribute('data'));
-        optionVal = selectedOpt
+        
+        
+        
 
         //render options
-        scenarioVal = scenarios[scenarioVal].options[optionVal].toScenario
         currentScen = scenarioVal
 
 
@@ -45,13 +51,13 @@ function renderScenarioOpt() {
         //console.log("scenval"+scenarioVal)
         $(scenarioDesc.children).remove();
         for (let i = 0; i < scenarios[scenarioVal].options[optionVal].text.length; i++) {
-            content += scenarios[scenarioVal].text[i] + " ";
+            content += scenarios[scenarioVal].options[optionVal].text[i] + " ";
         }
 
         var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
 
         $(ele).hide().appendTo(".description").each(function (i) {
-            $(this).delay(50 * i).css({
+            $(this).delay(1 * i).css({
                 display: 'inline',
                 opacity: 0,
             }).animate({
@@ -61,14 +67,15 @@ function renderScenarioOpt() {
         });
 
 
-
+        if (scenarios[currentScen].options[optionVal].actions.includes("killPlayer")) {
+            console.log("You has died!!!!!");
+        }
 
 
         if (scenarios[currentScen].options[optionVal].actions.includes("selfDestruct")) {
             console.log("destruction!!!!!");
             scenarios[currentScen].options.splice(optionVal, 1)
         }
-        console.log(scenarios[scenarioVal].options);
 
         //button renderer
         for (let i = 0; i < scenarios[scenarioVal].options.length; i++) {
@@ -82,6 +89,8 @@ function renderScenarioOpt() {
     //if  not same, render scenario
     else {
         console.log("Not Same");
+        console.log(currentScen+"current");
+        console.log(scenarioVal+"scen val");
         currentScen = scenarioVal
         console.log(scenarioVal);
         //clears any currently shown answer and text options before rendering new ones
@@ -109,7 +118,7 @@ function renderScenarioOpt() {
         var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
 
         $(ele).hide().appendTo(".description").each(function (i) {
-            $(this).delay(50 * i).css({
+            $(this).delay(1 * i).css({
                 display: 'inline',
                 opacity: 0,
             }).animate({
@@ -117,6 +126,7 @@ function renderScenarioOpt() {
                 color: "white",
             }, 100);
         });
+        return
 
     }
 

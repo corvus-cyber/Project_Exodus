@@ -2,9 +2,10 @@
 <html lang="en">
 	<head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/rpg-flicker.css" type="text/css"/>
-        <link rel="stylesheet" href="/css/house-flicker.css" type="text/css" />
-        <link rel="stylesheet" href="/css/style.css" type="text/css">
+        <link rel="stylesheet" href="./css/rpg-flicker.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/house-flicker.css" type="text/css" />
+        <link rel="stylesheet" href="./css/style.css" type="text/css">
+        <link rel="stylesheet" href="./css/fade.css" type="text/css">
 
         <title>Exodus</title>
         <script src="https://code.jquery.com/jquery.js"></script>
@@ -37,10 +38,21 @@
             <!-- Timer Display -->
             <div class= "row mt-2">
                 <!-- Timer is on a display none with id class evaporate. Remove id to have the timer display -->
-                <div class="col-md-12 d-flex justify-content-center" id="app evaporate">
+                <div class="col-md-12 d-flex justify-content-center" id="app">
                 </div>
             </div>
-            
+            <!--Door Open IMG-->
+            <div class="row mt-5">
+                <div class="col-md-12 d-flex justify-content-center">
+                   <img src="/assets/favicon/inverse.png" class="img-fluid door evaporate"> 
+                </div>
+            </div>
+            <!-- Skull IMG-->
+            <div class="row mt-5">
+                <div class="col-md-12 d-flex justify-content-center">
+                   <img src="/assets/favicon/inverse.png" class="img-fluid death evaporate"> 
+                </div>
+            </div>
             <!--Option Buttons-->
             <div class="row mb-5 mt-5 ">
                 <div id="scOpt" class="col-md-12  options d-flex justify-content-center">

@@ -2,6 +2,10 @@
   display: none;
 }
 
+.evaporate{
+  display: none;
+}
+
 .img-fluid{
     max-width: 8%;
 }
@@ -89,6 +93,7 @@ body{
   justify-content: center;
   font-size: 35px;
   color: white;
+  opacity: .8;
 }
 
 footer {
@@ -98,4 +103,8 @@ footer {
   width: 100%;
   opacity: .50;
 };
+
+
+
+
 

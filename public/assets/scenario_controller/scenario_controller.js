@@ -12,9 +12,9 @@ let scenarioDesc = document.getElementById("scDesc")
 let scenarioOpti = document.getElementById("scOpt")
 
 let scenarioVal = 0;
-let optionVal;
 let currentScen;
-let selectedOpt;
+let optionVal = 0;
+let selectedOpt = 0;
 
 
 //-------------------delivery  system-----------------
@@ -25,6 +25,7 @@ function renderScenarioOpt() {
     //if same, rerender options
     if (currentScen === scenarioVal) {
         console.log("Same");
+        console.log(scenarioVal);
         //clears any currently shown answer and text options before rendering new ones
         $(scenarioOpti.children).remove();
         console.log("Buttons Removed");
@@ -33,6 +34,7 @@ function renderScenarioOpt() {
 
         //render options
         scenarioVal = scenarios[scenarioVal].options[optionVal].toScenario
+        currentScen = scenarioVal
 
 
         //render option text
@@ -43,7 +45,7 @@ function renderScenarioOpt() {
         //console.log("scenval"+scenarioVal)
         $(scenarioDesc.children).remove();
         for (let i = 0; i < scenarios[scenarioVal].options[optionVal].text.length; i++) {
-            content += scenarios[scenarioVal].options[optionVal].text[i] + " ";
+            content += scenarios[scenarioVal].text[i] + " ";
         }
 
         var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
@@ -76,20 +78,15 @@ function renderScenarioOpt() {
         }
         console.log("Buttons Created");
 
-
-
-
-
-
     }
     //if  not same, render scenario
     else {
         console.log("Not Same");
         currentScen = scenarioVal
+        console.log(scenarioVal);
         //clears any currently shown answer and text options before rendering new ones
         $(scenarioOpti.children).remove();
         console.log("Buttons Removed");
-
         //render options
         for (let i = 0; i < scenarios[scenarioVal].options.length; i++) {
             //renders the title of the option and sets data value to that options v
@@ -106,6 +103,7 @@ function renderScenarioOpt() {
         $(scenarioDesc.children).remove();
         for (let i = 0; i < scenarios[scenarioVal].text.length; i++) {
             content += scenarios[scenarioVal].text[i] + " ";
+            
         }
 
         var ele = '<span>' + content.split('').join('</span><span>') + '</span>';

@@ -12,32 +12,29 @@ let scenario_3={
     options: [
         {
             id: 1,
-            title: "sec3testne Yourself",
-            text: ["You look down to better gauge your physical state, and it becomes instantly clear why you ache so much. Your arms and legs are covered in stitches surrounding patches of skin that are clearly not your own. Some of them are light, others are dark. One patch on your right arm appears to be rotten and decaying."],
-            actions:[],
-            toScenario: 1
+            title: "Look for Something Useful",
+            text: ["You quickly scan the room. To your immediate left is a sink, rusted and stained. Lying in the sink is a bloodied scalpel. You slowly reach over and pick up the scalpel. You never know when you might need this. The doctor hasn’t noticed you yet."],
+            actions:["selfDestruct",],
+            toScenario: 2
         },
         {
             id: 2,
-            title: "sec3test",
-            text: ["It appears that some of your stitches are still seeping blood and plasma. You quickly grab the bandages on the table and wrap your wounds. Not the best job, but it’ll work for now."],
-            actions:["selfDestruct",
-            ],
-            toScenario: 1
+            title: "Attack the Doctor",
+            text: ["Despite yourself, you feel a rage growing deep inside your gut. This man is sick, and someone needs to stop him.",
+                    "You launch yourself at the doctor, landing on his back and begin pounding his head with your fists. With a single fluid motion, the doctor grabs your wrist and throws you to the ground. You land flat on your back, and feel the wind forcibly expelled from your lungs.",
+                    '“I see the solution didn’t work.” Genuine regret permeates the doctor’s voice “That’s really too bad. I had high hopes for you.”',
+                    "You try to get up, but the doctor places his foot on your chest, holding you to the floor. You wriggle and writhe, desperately clawing at his pant legs in vain. You see the doctor pick up a brown cylinder with multiple needles on one end. With a grunt, the doctor rams the device into your neck. You gasp as you feel something cold spread throughout your body. The room begins to spin and darken. Just as everything goes black you hear,",
+                    '“We’ll just have to try again.”'],
+            actions:[            ],
+            toScenario: 2
         },
         {
             id: 3,
-            title: "sec3testurnal",
+            title: "Leave the Room",
             text: [""],
             actions:[],
             toScenario: 1
         },
-        {
-            id: 4,
-            title: "sec3test",
-            text: [""],
-            actions:[],
-            toScenario: 1
-        }]
+        ]
 };
 export default {scenario_3};

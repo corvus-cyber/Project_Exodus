@@ -11,6 +11,7 @@ var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+var Highscore = require("./models/highscore.js");
 
 // Set Handlebars.
 
@@ -19,17 +20,12 @@ app.set("view engine", "handlebars");
 
 // Requiring our routes
 
-var routes = require("./routes/html-routes.js");
+var routes = require("./routes/exodus-controller.js");
 app.use(routes);
 //require("./routes/api-routes.js")(app);
 
-// Syncing our database and logging a message to the user upon success
-//db.sequelize.sync().then(function() {
-//   app.listen(PORT, function() {
-//     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-//   });
-// });
+
+db.sequelize.sync();
 app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
+    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
 });

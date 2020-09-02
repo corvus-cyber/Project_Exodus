@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "exodus_scenarios",
-    "host": "127.0.0.1",
+    "username": "stjwf5ews6cm6z0o",
+    "password": "v65w4t25fsdtlbnf",
+    "database": "bkoh7225f12prno8",
+    "host": "e11wl4mksauxgu1w.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
@@ -14,6 +14,7 @@
     "dialect": "mysql"
   },
   "production": {
+    "use_env_variable": "JAWSDB_URL",
     "username": "root",
     "password": null,
     "database": "database_production",

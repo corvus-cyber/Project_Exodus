@@ -1,0 +1,60 @@
+        <div class="container"> 
+            <!-- Title -->
+            <div class="row">
+                <div class="col-md-12">  
+                    <h1>
+                        <div class="d-flex justify-content-center">
+                            <span id="E">E</span>
+                            <span id="X">X</span>
+                            <span id="O">O</span>
+                            <span id="D">D</span>
+                            <span id="U">U</span>
+                            <span id="S">S</span>
+                        </div>
+                    </h1>
+                </div>  
+            </div>
+            <!--High Score Display-->
+            <div class="row mb-5 mt-5 justify-content-center">
+                <div class="col-md-8 options">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Name</th>
+                            <th scope="col float-right">Number of Deaths</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            {{#each highscore_data}}
+                          <tr>
+                            <th scope="row"></th>
+                            <td>{{username}}</td>
+                            <td>{{score}}</td>
+                          </tr>
+                          {{/each}}
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            <!-- High Score Form -->
+            <div class="row mt-5 mb-5 d-flex justify-content-center">
+                <div class="col-md-6 submitform text-center">
+                    <form>
+                        <input type="text" class="form control" name="high-score" id="log-score">
+                        <button type="submit" class="btn btn-dark button-styling" id="submit-score">Sign Death Certificate</button>
+                    </form>
+                </div>
+            </div>
+            <!--Return to RPG Button-->
+            <div class="row mt-5 mb-5 d-flex justify-content-center">
+                <div class="col-md-6 submitform text-center">            
+                        <button type="submit" class="btn btn-dark btn-lg button-styling" id="submit-score">Return To The Nightmare</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-center">
+                   <img src="assets/favicon/inverse.png" class="img-fluid" id="house"> 
+                </div>
+            </div>
+        </div>  

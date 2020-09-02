@@ -14,7 +14,7 @@ let scenario_1={
             title: "Look down and Examine Yourself",
             text: ["You look down to better gauge your physical state, and it becomes instantly clear why you ache so much. Your arms and legs are covered in stitches surrounding patches of skin that are clearly not your own. Some of them are light, others are dark. One patch on your right arm appears to be rotten and decaying."],
             actions:[],
-            toScenario: 0
+            toScenario: 1
         },
         {
             id: 2,
@@ -27,9 +27,12 @@ let scenario_1={
         {
             id: 3,
             title: "Look Through the Journal",
-            text: [""],
+            text: ["You decide to look through the journal to gain clues about why you are here. It appears to be some sort of logbook. The pages are worn and yellowed with age, although the latest appear to be freshly made.",
+                    "Day 2: Subject 213 is still responding well to the solution. No visible changes.",
+                    "Day 3: Prep work for operation complete. Subject ready for experiment. Graft 1-5 success. Subject shows promise for organ transfer.",
+                    "This writing goes on for pages. It’s clear that you aren’t the first person trapped here. You still have no idea what this place is, but one thing is clear: you need to get the hell out."   ],
             actions:[],
-            toScenario: 0
+            toScenario: 1
         },
         {
             id: 4,

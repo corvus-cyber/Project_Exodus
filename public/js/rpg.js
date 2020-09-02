@@ -142,23 +142,39 @@ $(document).ready(function() {
 
 
     
-    //SET INTERVAL THAT WILL Add Class 
-    function runFade(){
+    //TIMER THAT WILL MAKE IMAGES FADE IN AND FADE OUT
+    function runDoorFade(){
         $(".door").removeClass("evaporate")
         $(".door").addClass("fade-in");
         function fadeOut() {
             setTimeout(function () {
                 $(".door").removeClass("fade-in");
                 $(".door").addClass("fade-out");
-            }, 10000).then(()=>{
-                $(".door").addClass("evaporate")
-                })
-                
-            };
+                setTimeout(function(){
+                    $(".door").addClass("evaporate");
+                    $(".door").removeClass("fade-out");
+                }, 8000);
+            }, 10000)};
+        fadeOut();    
+    };
+
+    function runDeathFade(){
+        $(".death").removeClass("evaporate")
+        $(".death").addClass("fade-in");
+        function fadeOut() {
+            setTimeout(function () {
+                $(".death").removeClass("fade-in");
+                $(".death").addClass("fade-out");
+                setTimeout(function(){
+                    $(".death").addClass("evaporate");
+                    $(".death").removeClass("fade-out");
+                }, 8000);
+            }, 10000)};
         fadeOut();    
     };
         
 
-    runFade();
+    runDoorFade();
+    runDeathFade();
 
 })

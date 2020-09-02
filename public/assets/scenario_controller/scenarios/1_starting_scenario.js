@@ -1,5 +1,5 @@
 let scenario_1={
-    id: 1,
+    id: 0,
     title: "",
     text: [
         "The first thing you notice when you awaken is a deep, aching pain throughout your entire body. Your head throbs painfully, as though it were being squeezed in a vice grip. You look down and notice that all you are wearing is a soiled hospital gown, covered with stains from God knows what. You are lying on some kind of hospital bed that’s been stained with blood, some of it fresh.",
@@ -13,7 +13,8 @@ let scenario_1={
             id: 1,
             title: "Look down and Examine Yourself",
             text: ["You look down to better gauge your physical state, and it becomes instantly clear why you ache so much. Your arms and legs are covered in stitches surrounding patches of skin that are clearly not your own. Some of them are light, others are dark. One patch on your right arm appears to be rotten and decaying."],
-            actions:[],
+            actions:["killPlayer",
+        ],
             toScenario: 0,
         },
         {

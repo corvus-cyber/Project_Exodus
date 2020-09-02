@@ -21,7 +21,7 @@ let scenario_2={
             title: "Enter Operation Room",           
             text: [""],
             actions:[            ],
-            toScenario: 1
+            toScenario: 2
         },
         {
             id: 3,

@@ -17,5 +17,15 @@ router.get("/highscore", function (req, res) {
     })
 })
 
+router.post("/highscore", function (req, res) {
+    console.log(req.body)
+    db.Highscore.create({
+        username: req.body.username,
+        score: req.body.score
+      }).then(function(data) {
+        res.json(data);
+      });
+})
+
 
 module.exports = router;

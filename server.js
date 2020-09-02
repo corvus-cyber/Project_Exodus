@@ -20,19 +20,15 @@ app.set("view engine", "handlebars");
 
 // Requiring our routes
 
-var routes = require("./routes/html-routes.js");
+var routes = require("./routes/exodus-controller.js");
 app.use(routes);
 //require("./routes/api-routes.js")(app);
 
-// db.sequelize.sync().then(function() {
-//   app.listen(PORT, function() {
-//     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-//   });
-// });
 
 db.sequelize.sync();
 app.listen(PORT, function() {
     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+<<<<<<< HEAD
 });
 
 db.Highscore.create({
@@ -50,3 +46,6 @@ db.Highscore.create({
 //   username: "Wyatt Hancock",
 //   score: 5
 // })
+=======
+});
+>>>>>>> d4af25064ed993613f3f645ccf650f5d9bb423db

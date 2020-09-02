@@ -5,22 +5,15 @@ $(document).ready(function() {
         return false;
     });
 
-    // This is to add a new audio and a simple event listener to activate it
-    var heartBeat = new Audio ("/assets/sounds/heartbeat.mp3");
-
-    $(".btn").click(function(){
-        heartBeat.play();
-    });
 
 
-
-    var content = "You awake in a cold dimly lit room, damp sweat coating your clammy skin. The air is tight in your chest, you struggle to gain a sense of your surroundings. How did you end up here? This isn't your bedroom, and the rank pile of rags you find yourself lying on is certainly not your bed. Fear clamps over your throat. That is when you begin the notice the pain in your abdomen..."
+    var content = "Welcome to EXODUS, Team Undefined's venture into choose-your-own-adventure, with a sinister twist. While delving into the nightmare, make your choices carefully; the consequences can be dire. Best of Luck."
 
     console.log(content)
 
     var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
 
-    //console.log(ele)
+    console.log(ele)
     $(ele).hide().appendTo(".description").each(function (i) {
         $(this).delay(50 * i).css({
             display: 'inline',
@@ -147,5 +140,4 @@ $(document).ready(function() {
         .setAttribute("stroke-dasharray", circleDasharray);
     }
 
-});
-
+})

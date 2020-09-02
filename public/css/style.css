@@ -2,8 +2,12 @@
   display: none;
 }
 
-.img-fluid{
-    max-width: 8%;
+.evaporate{
+  display: none;
+}
+
+.logo{
+  max-width: 8%;
 }
 
 body{
@@ -89,6 +93,7 @@ body{
   justify-content: center;
   font-size: 35px;
   color: white;
+  opacity: .8;
 }
 
 footer {
@@ -98,4 +103,8 @@ footer {
   width: 100%;
   opacity: .50;
 };
+
+
+
+
 

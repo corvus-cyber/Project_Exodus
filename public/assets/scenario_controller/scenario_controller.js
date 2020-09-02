@@ -12,27 +12,72 @@ let scenarioDesc = document.getElementById("scDesc")
 let scenarioOpti = document.getElementById("scOpt")
 
 let scenarioVal = 0;
-let optionVal;
 let currentScen;
-let selectedOpt;
+let optionVal =0;
+let selectedOpt =0;
+
+
+// let deathCounter = 0;
+
+$("#submit-score").on("click", function(event){
+
+    
+    event.preventDefault();
+
+    //manually set local storage "death" value to 0
+
+    // console.log(deathCounter);
+    const newUser = {
+        username: $("#log-score").val().trim(),
+        score: deathCounter
+    };
+    
+    $.ajax("/highscore", {
+        type: "POST",
+        data: newUser
+    }).then(
+        function(){
+            console.log("new user created")
+            location.reload();
+        }
+    )
+});
+
+function updateDeath(){
+    let deathCounter;
+    //manually set local storage "death" value to 0 in the submit event listener
+    //deathCounter holds the value to what's in local storage, localStorage.getItem
+    // add 1 to deathCounter
+    localStorage.setItem("death", deathCounter)
+}
+
+
 
 
 //-------------------delivery  system-----------------
 scenarioOpti.addEventListener("click", renderScenarioOpt);
 function renderScenarioOpt() {
 
-
+    selectedOpt = parseInt(event.target.getAttribute('data'));
+    optionVal = selectedOpt
+    scenarioVal = scenarios[scenarioVal].options[optionVal].toScenario
+        
+    console.log(selectedOpt);
     //if same, rerender options
     if (currentScen === scenarioVal) {
         console.log("Same");
+        console.log(currentScen+"current");
+        console.log(scenarioVal+"scen val");
+
         //clears any currently shown answer and text options before rendering new ones
         $(scenarioOpti.children).remove();
         console.log("Buttons Removed");
-        selectedOpt = parseInt(event.target.getAttribute('data'));
-        optionVal = selectedOpt
+        
+        
+        
 
         //render options
-        scenarioVal = scenarios[scenarioVal].options[optionVal].toScenario
+        currentScen = scenarioVal
 
 
         //render option text
@@ -49,7 +94,7 @@ function renderScenarioOpt() {
         var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
 
         $(ele).hide().appendTo(".description").each(function (i) {
-            $(this).delay(50 * i).css({
+            $(this).delay(1 * i).css({
                 display: 'inline',
                 opacity: 0,
             }).animate({
@@ -59,14 +104,17 @@ function renderScenarioOpt() {
         });
 
 
-
+        if (scenarios[currentScen].options[optionVal].actions.includes("killPlayer")) {
+            console.log("You has died!!!!!");
+            updateDeath()
+            console.log(deathCounter);
+        }
 
 
         if (scenarios[currentScen].options[optionVal].actions.includes("selfDestruct")) {
             console.log("destruction!!!!!");
             scenarios[currentScen].options.splice(optionVal, 1)
         }
-        console.log(scenarios[scenarioVal].options);
 
         //button renderer
         for (let i = 0; i < scenarios[scenarioVal].options.length; i++) {
@@ -76,20 +124,17 @@ function renderScenarioOpt() {
         }
         console.log("Buttons Created");
 
-
-
-
-
-
     }
     //if  not same, render scenario
     else {
         console.log("Not Same");
+        console.log(currentScen+"current");
+        console.log(scenarioVal+"scen val");
         currentScen = scenarioVal
+        console.log(scenarioVal);
         //clears any currently shown answer and text options before rendering new ones
         $(scenarioOpti.children).remove();
         console.log("Buttons Removed");
-
         //render options
         for (let i = 0; i < scenarios[scenarioVal].options.length; i++) {
             //renders the title of the option and sets data value to that options v
@@ -106,12 +151,13 @@ function renderScenarioOpt() {
         $(scenarioDesc.children).remove();
         for (let i = 0; i < scenarios[scenarioVal].text.length; i++) {
             content += scenarios[scenarioVal].text[i] + " ";
+            
         }
 
         var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
 
         $(ele).hide().appendTo(".description").each(function (i) {
-            $(this).delay(50 * i).css({
+            $(this).delay(1 * i).css({
                 display: 'inline',
                 opacity: 0,
             }).animate({
@@ -119,6 +165,7 @@ function renderScenarioOpt() {
                 color: "white",
             }, 100);
         });
+        return
 
     }
 

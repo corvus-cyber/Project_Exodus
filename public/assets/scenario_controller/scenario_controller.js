@@ -19,31 +19,33 @@ let selectedOpt =0;
 
 let deathCounter = 0;
 
-
+// $("#submit-score").on("click", function(event){
+    
+//     event.preventDefault();
+//     console.log(deathCounter);
+//     const newUser = {
+//         username: $("#log-score").val().trim(),
+//         score: deathCounter
+//     };
+    
+//     $.ajax("/highscore", {
+//         type: "POST",
+//         data: newUser
+//     }).then(
+//         function(){
+//             console.log("new user created")
+//             location.reload();
+//         }
+//     )
+// });
 
 function updateDeath(){
     deathCounter += 1;
     console.log(deathCounter);
+    localStorage.setItem("death",+ 1)
 }
 
-$("#submit-score").on("click", function(event){
-    event.preventDefault();
-    console.log(deathCounter);
-    const newUser = {
-        username: $("#log-score").val().trim(),
-        score: deathCounter
-    };
-    
-    $.ajax("/highscore", {
-        type: "POST",
-        data: newUser
-    }).then(
-        function(){
-            console.log("new user created")
-            location.reload();
-        }
-    )
-});
+
 
 
 //-------------------delivery  system-----------------

@@ -17,5 +17,8 @@
     "mysql2": "^1.7.0",
     "nodemon": "^2.0.4",
     "sequelize": "^4.44.4"
+  },
+  "devDependencies": {
+    "handlebars": "^4.5.0"
   }
 }

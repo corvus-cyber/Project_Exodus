@@ -25,7 +25,9 @@ $("#submit-score").on("click", function(event){
     event.preventDefault();
 
     //manually set local storage "death" value to 0
-
+    // 1 of line 29 and 30 should clear the local storage when we click sign death certificate button.
+    // sessionStorage.removeItem("death")
+    // localstorage.clear();
     // console.log(deathCounter);
     const newUser = {
         username: $("#log-score").val().trim(),

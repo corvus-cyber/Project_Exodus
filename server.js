@@ -28,24 +28,5 @@ app.use(routes);
 db.sequelize.sync();
 app.listen(PORT, function() {
     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
-<<<<<<< HEAD
 });
 
-db.Highscore.create({
-  username: "Raj",
-  score: 10
-})
-
-// Fixing the password issue.
-// db.Highscore.create({
-//   username: "Raj",
-//   score: 10
-// })
-
-// db.Highscore.create({
-//   username: "Wyatt Hancock",
-//   score: 5
-// })
-=======
-});
->>>>>>> d4af25064ed993613f3f645ccf650f5d9bb423db

@@ -12,7 +12,7 @@ router.get("/", function (req, res) {
 router.get("/highscore", function (req, res) {
     db.Highscore.findAll({}).then(function (data) {
         data = JSON.parse(JSON.stringify(data))
-        // console.log(data);
+        console.log(data);
         res.render("highscore", { highscore_data: data });
     })
 })

@@ -16,31 +16,20 @@ let currentScen;
 let optionVal =0;
 let selectedOpt =0;
 
-
-// let deathCounter = 0;
-
-$(".Begin").on("click", function(event){
-    event.preventDefault();
-    localStorage.setItem("death", 0)
-})
-
-
+//When "sign death certificate" button is clicked, it will add the username and score in the database
 $("#submit-score").on("click", function(event){
-
     
     event.preventDefault();
 
-    //manually set local storage "death" value to 0
-    // 1 of line 29 and 30 should clear the local storage when we click sign death certificate button.
-    // sessionStorage.removeItem("death")
-    // localstorage.clear();
-    // console.log(deathCounter);
     let deathCounter = parseInt(localStorage.getItem("death"));
+
+    //information that we will save to database
     const newUser = {
         username: $("#log-score").val().trim(),
         score: deathCounter
     };
     
+    //connects to the /highscore route in exodus-controller.js and posts to the route
     $.ajax("/highscore", {
         type: "POST",
         data: newUser
@@ -50,14 +39,18 @@ $("#submit-score").on("click", function(event){
             location.reload();
         }
     )
+
+    //The game is over now, set the local storage death count to default 0
+    localStorage.setItem("death", 0)
 });
 
+//This function increases the death count by 1
 function updateDeath(){
+    //get the current death count from local storage and add 1 to it
     let deathCounter = parseInt(localStorage.getItem("death")) + 1;
-    //manually set local storage "death" value to 0 in the submit event listener
-    //deathCounter holds the value to what's in local storage, localStorage.getItem
-    // add 1 to deathCounter
     // console.log(typeof deathCounter, "deathCounter in local storage before update");
+
+    //set the new updated death count as the local storage
     localStorage.setItem("death", deathCounter)
 }
 

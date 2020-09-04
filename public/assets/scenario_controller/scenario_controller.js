@@ -65,22 +65,29 @@ function updateDeath(){
 
 }
 
+function win(){
+    window.location.replace("../../victory.html")
+};
 
+function alpha(){
+    renderScenarioOpt()
+};
 
 
 //-------------------delivery  system-----------------
 scenarioOpti.addEventListener("click", renderScenarioOpt);
 function renderScenarioOpt() {
 
-
+    selectedOpt = parseInt(event.target.getAttribute('data'));
+    console.log(selectedOpt);
+    optionVal = selectedOpt
+    scenarioVal = scenarios[scenarioVal].options[optionVal].toScenario
 
 
 
     //if same, rerender options
     if (currentScen === scenarioVal) {
-        selectedOpt = parseInt(event.target.getAttribute('data'));
-        optionVal = selectedOpt
-        scenarioVal = scenarios[scenarioVal].options[optionVal].toScenario
+
         console.log("Same");
 
         //clears any currently shown answer and text options before rendering new ones
@@ -97,7 +104,7 @@ function renderScenarioOpt() {
         //render option text
         $(scenarioDesc.children).remove();
         for (let i = 0; i < scenarios[scenarioVal].options[optionVal].text.length; i++) {
-            content += scenarios[scenarioVal].options[optionVal].text[i] + " ";
+            content = scenarios[scenarioVal].options[optionVal].text[i];
             
             let p = `<p id="scenPara_${i}"></p>`
             scenarioDesc.insertAdjacentHTML("beforeend", p);
@@ -113,6 +120,7 @@ function renderScenarioOpt() {
                     color: "white",
                 }, 100);
             });
+
         }
 
 
@@ -121,43 +129,45 @@ function renderScenarioOpt() {
             updateDeath();
         }
 
+        if (scenarios[currentScen].options[optionVal].actions.includes("winState")) {
+            console.log("You has died!!!!!");
+            win();
+        }
+
+
         if (scenarios[currentScen].options[optionVal].actions.includes("getKey")) {
             console.log("You has Key!!!!!");
             hasKey = true
-            console.log(hasKey);
         }
 
         if (scenarios[currentScen].options[optionVal].actions.includes("getScalp")) {
             console.log("You has Scalp!!!!!");
             hasScalp = true
-            console.log(hasKey);
         }
 
-        if (scenarios[currentScen].options[optionVal].actions.includes("getScalp")) {
-            console.log("You has Scalp!!!!!");
-            hasScalp = true
-            console.log(hasKey);
-        }
+        // if (scenarios[currentScen].options[optionVal].actions.includes("getScalp")) {
+        //     console.log("You has Scalp!!!!!");
+        //     hasScalp = true
+        //     console.log(hasKey);
+        // }
 
  
 
         if (scenarios[currentScen].options[optionVal].actions.includes("attackDoc")) {
-            console.log("You has Scalp!!!!!");
+            console.log("You attk Doc!!!!!");
             // if (hasScalp === true) {
 
             // }
         }
 
         if (scenarios[currentScen].options[optionVal].actions.includes("attackMon")) {
-            console.log("You has Scalp!!!!!");
+            console.log("You attk Mon!!!!!");
             // if (hasScalp === true) {
 
             // }
         }
-        if (scenarios[currentScen].options[optionVal].actions.includes("selfDestruct")) {
-            console.log("destruction!!!!!");
-            scenarios[currentScen].options.splice(optionVal, 1)
-        }
+        
+
 
         if (scenarios[currentScen].options[optionVal].actions.includes("timer")) {
             console.log("");
@@ -283,19 +293,25 @@ function renderScenarioOpt() {
             }
             timerLapse();
         }
+
         if (scenarios[currentScen].options[optionVal].actions.includes("exit")) {
-            console.log("You has Scalp!!!!!");
+            
             if (hasKey === true) {
+                console.log("You has Key!!!!!");
                 selectedOpt = parseInt(event.target.getAttribute('data'));
                 optionVal = selectedOpt
                 scenarioVal = 1
-                return renderScenarioOpt
+
+                return secondaryRender()
             }
         }
 
 
 
-
+        if (scenarios[currentScen].options[optionVal].actions.includes("selfDestruct")) {
+            console.log("destruction!!!!!");
+            scenarios[currentScen].options.splice(optionVal, 1)
+        }
         //button renderer
         for (let i = 0; i < scenarios[scenarioVal].options.length; i++) {
             //renders the title of the option and sets data value to that options v
@@ -309,9 +325,7 @@ function renderScenarioOpt() {
     }
     //if  not same, render scenario
     else {
-        selectedOpt = 0;
-        optionVal = selectedOpt
-        scenarioVal = 0
+
 
         console.log("Not Same");
         currentScen = scenarioVal
@@ -365,31 +379,59 @@ function renderScenarioOpt() {
         return
 
     }
-
-
-
-
-
-
-
-
-    //prepares the content variable
-
-
-
-    // if current val is not = to scenval render scenario, else render option 
-
-    //listen to options
-    //scenarioOpti.addEventListener("click", function (event) {
-    //remove options
-    //$(scenarioDesc.children).remove();
-    //get the value of which option was selected
-
-
-
-
-    //return renderScenarioOpt()
-
-    //});
-
 };
+
+function secondaryRender() {
+    
+
+    console.log("Secondary Render");
+    currentScen = scenarioVal
+    //clears any currently shown answer and text options before rendering new ones
+    $(scenarioOpti.children).remove();
+    
+    //render options
+    for (let i = 0; i < scenarios[scenarioVal].options.length; i++) {
+        //renders the title of the option and sets data value to that options v
+        let opt = `<button data=${i} type="button" class="btn btn-dark button-styling">${scenarios[scenarioVal].options[i].title} </button>`
+        scenarioOpti.insertAdjacentHTML("beforeend", opt);
+    }
+    
+
+    let content;
+    //without this the content will start with "undefined"
+    content = "";
+    //render text
+    // for (let i = 0; i < scenarios[scenarioVal].options.length; i++) {
+    //     //renders the title of the option and sets data value to that options v
+    //     let opt = `<button data=${i} type="button" class="btn btn-dark button-styling">${scenarios[scenarioVal].options[i].title} </button>`
+    //     scenarioOpti.insertAdjacentHTML("beforeend", opt);
+    // }
+
+   
+    $(scenarioDesc.children).remove();
+    for (let i = 0; i < scenarios[scenarioVal].text.length; i++) {
+        content = scenarios[scenarioVal].text[i];
+        
+        let p = `<p id="scenPara_${i}"></p>`
+        scenarioDesc.insertAdjacentHTML("beforeend", p);
+        
+       
+        var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
+
+        $(ele).hide().appendTo("#scenPara_"+i+"").each(function (i) {
+            $(this).delay(50 * i).css({
+                display: 'inline',
+                opacity: 0,
+            }).animate({
+                opacity: 1,
+                color: "white",
+            }, 100);
+        });
+    }
+    
+    
+
+    
+
+    return
+}

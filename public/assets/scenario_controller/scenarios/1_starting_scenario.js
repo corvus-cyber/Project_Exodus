@@ -13,7 +13,7 @@ let scenario_1={
             id: 1,
             title: "Look down and Examine Yourself",
             text: ["You look down to better gauge your physical state, and it becomes instantly clear why you ache so much. Your arms and legs are covered in stitches surrounding patches of skin that are clearly not your own. Some of them are light, others are dark. One patch on your right arm appears to be rotten and decaying."],
-            actions:["killPlayer",
+            actions:[,
         ],
             toScenario: 0,
         },
@@ -21,7 +21,7 @@ let scenario_1={
             id: 2,
             title: "Grab the Bandages",
             text: ["It appears that some of your stitches are still seeping blood and plasma. You quickly grab the bandages on the table and wrap your wounds. Not the best job, but it’ll work for now."],
-            actions:["selfDestruct","getKey",
+            actions:["getKey","selfDestruct",
             ],
             toScenario: 0
         },

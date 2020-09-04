@@ -25,7 +25,7 @@ let scenario_3={
                     '“I see the solution didn’t work.” Genuine regret permeates the doctor’s voice “That’s really too bad. I had high hopes for you.”',
                     "You try to get up, but the doctor places his foot on your chest, holding you to the floor. You wriggle and writhe, desperately clawing at his pant legs in vain. You see the doctor pick up a brown cylinder with multiple needles on one end. With a grunt, the doctor rams the device into your neck. You gasp as you feel something cold spread throughout your body. The room begins to spin and darken. Just as everything goes black you hear,",
                     '“We’ll just have to try again.”'],
-            actions:[            ],
+            actions:[],
             toScenario: 2
         },
         {

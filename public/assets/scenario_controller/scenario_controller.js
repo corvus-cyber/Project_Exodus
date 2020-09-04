@@ -115,6 +115,12 @@ function renderScenarioOpt() {
             updateDeath()
    //         console.log(deathCounter);
         }
+        if (scenarios[currentScen].options[optionVal].actions.includes("timer")) {
+            console.log("");
+            let timer = document.getElementById("app")
+            timer.classList.remove("evaporate")
+   //         console.log(deathCounter);
+        }
 
 
         if (scenarios[currentScen].options[optionVal].actions.includes("selfDestruct")) {

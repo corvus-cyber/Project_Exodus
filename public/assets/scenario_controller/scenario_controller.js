@@ -17,32 +17,44 @@ let optionVal =0;
 let selectedOpt =0;
 
 
-let deathCounter = 0;
+// let deathCounter = 0;
+$(".Begin").on("click", function(event){
+    event.preventDefault();
+    localStorage.setItem("death", 0)
+})
 
-// $("#submit-score").on("click", function(event){
+$("#submit-score").on("click", function(event){
     
-//     event.preventDefault();
-//     console.log(deathCounter);
-//     const newUser = {
-//         username: $("#log-score").val().trim(),
-//         score: deathCounter
-//     };
+    event.preventDefault();
+    //manually set local storage "death" value to 0
+    // 1 of line 29 and 30 should clear the local storage when we click sign death certificate button.
+    // sessionStorage.removeItem("death")
+    // localstorage.clear();
+    // console.log(deathCounter);
+    let deathCounter = parseInt(localStorage.getItem("death"));
+    const newUser = {
+        username: $("#log-score").val().trim(),
+        score: deathCounter
+    };
     
-//     $.ajax("/highscore", {
-//         type: "POST",
-//         data: newUser
-//     }).then(
-//         function(){
-//             console.log("new user created")
-//             location.reload();
-//         }
-//     )
-// });
+    $.ajax("/highscore", {
+        type: "POST",
+        data: newUser
+    }).then(
+        function(){
+            console.log("new user created")
+            location.reload();
+        }
+    )
+});
 
 function updateDeath(){
-    deathCounter += 1;
-    console.log(deathCounter);
-    localStorage.setItem("death",+ 1)
+    let deathCounter = parseInt(localStorage.getItem("death")) + 1;
+    //manually set local storage "death" value to 0 in the submit event listener
+    //deathCounter holds the value to what's in local storage, localStorage.getItem
+    // add 1 to deathCounter
+    console.log(typeof deathCounter, "deathCounter in local storage before update");
+    localStorage.setItem("death", deathCounter)
 }
 
 
@@ -101,7 +113,7 @@ function renderScenarioOpt() {
         if (scenarios[currentScen].options[optionVal].actions.includes("killPlayer")) {
             console.log("You has died!!!!!");
             updateDeath()
-            console.log(deathCounter);
+   //         console.log(deathCounter);
         }
 
 

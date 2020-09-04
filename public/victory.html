@@ -1,59 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/rpg-flicker.css" type="text/css"/>
-        <link rel="stylesheet" href="./css/house-flicker.css" type="text/css" />
-        <link rel="stylesheet" href="./css/style.css" type="text/css">
-        <link rel="stylesheet" href="./css/fade.css" type="text/css">
 
-        <title>Exodus</title>
-        <script src="https://code.jquery.com/jquery.js"></script>
-        <script type="module" src="./assets/scenario_controller/scenario_controller.js"></script>
-        <script src="js/rpg.js"></script>
-	</head>
-	<body>
-        <div class="container"> 
-            <!-- Title -->
-            <div class="row mt-5 position-static">
-                <div class="col-md-12">  
-                    <h1>
-                        <div class="d-flex justify-content-center">
-                            <span id="E">E</span>
-                            <span id="X">X</span>
-                            <span id="O">O</span>
-                            <span id="D">D</span>
-                            <span id="U">U</span>
-                            <span id="S">S</span>
-                        </div>
-                    </h1>
-                </div>  
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/rpg-flicker.css" type="text/css" />
+    <link rel="stylesheet" href="./css/house-flicker.css" type="text/css" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/fade.css" type="text/css">
+
+    <title>Exodus</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="module" src="./assets/scenario_controller/scenario_controller.js"></script>
+    <script src="js/rpg.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Title -->
+        <div class="row mt-5 position-static">
+            <div class="col-md-12">
+                <h1>
+                    <div class="d-flex justify-content-center">
+                        <span id="E">E</span>
+                        <span id="X">X</span>
+                        <span id="O">O</span>
+                        <span id="D">D</span>
+                        <span id="U">U</span>
+                        <span id="S">S</span>
+                    </div>
+                </h1>
             </div>
-            <!--Door Open IMG-->
-            <div class="row mt-5">
-                <div class="col-md-12 d-flex justify-content-center">
-                   <img src="./assets/img/door.png" class="img-fluid door evaporate"> 
-                </div>
+        </div>
+        <!--Door Open IMG-->
+        <div class="row mt-5">
+            <div class="col-md-12 d-flex justify-content-center">
+                <img src="./assets/img/door.png" class="img-fluid door evaporate">
             </div>
-            <!--Go to HighScore Button-->
-            <div class="row mt-5 mb-5 d-flex justify-content-center">
-                <div class="col-md-6 submitform text-center">            
-                        <button type="submit" class="btn btn-dark btn-lg button-styling" id="submit-score">Escape The Nightmare And Enter Your Score</button>
-                </div>
+        </div>
+        <!--Go to HighScore Button-->
+        <div class="row mt-5 mb-5 d-flex justify-content-center">
+            <div class="col-md-6 submitform text-center">
+              <a href="/highscore"><button class="btn btn-dark btn-lg button-styling" id="highscore-button">Escape The Nightmare
+                And Enter Your Score</button></a>
+
+                <!-- <button onclick="window.location='http://www.example.com';">Visit Page Now</button> -->
+                
             </div>
-            <!-- LOGO IMG -->
-            <div class="row">
-                <div class="col-md-12 d-flex justify-content-center">
-                   <img src="./assets/favicon/inverse.png" class="img-fluid logo" id="house"> 
-                </div>
+        </div>
+        <!-- LOGO IMG -->
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+                <img src="./assets/favicon/inverse.png" class="img-fluid logo" id="house">
             </div>
-        </div> 
-        <!-- Sound controller -->
-        <footer>
-            <div class="text-center">
-                <audio controls loop autoplay="true" id="backgroundMusic">    <source src="/assets/sounds/Come-Play-With-Me.mp3"> </audio>
-            </div>
-        </footer>
-        
-	</body>
+        </div>
+    </div>
+    <!-- Sound controller -->
+    <footer>
+        <div class="text-center">
+            <audio controls loop autoplay="true" id="backgroundMusic">
+                <source src="/assets/sounds/Come-Play-With-Me.mp3"> </audio>
+        </div>
+    </footer>
+
+    <script type="module" src="./assets/scenario_controller/scenario_controller.js"></script>
+</body>
+
 </html>

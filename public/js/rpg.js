@@ -45,7 +45,7 @@ $(document).ready(function() {
         function fadeOut() {
             setTimeout(function () {
                 $(".death").removeClass("fade-in");
-                $(".death").addClass("evaporate");
+                $(".death").addClass("fade-out");
                 setTimeout(function(){
                     $(".death").addClass("evaporate");
                     $(".death").removeClass("fade-out");

@@ -83,6 +83,18 @@ body{
   color: 	#C0C0C0;
 }
 
+.base-timer__circle {
+  animation: fade-in-out 3s ease infinite;
+}
+
+@keyframes fade-in-out {
+  0%       {opacity: 0.2}
+  15%      {opacity: 1}
+  50%      {opacity: 0.2}
+  65%      {opacity: 1}
+  100%     {opacity: 0.2}
+}
+
 .base-timer__label {
   position: absolute;
   width: 100%;

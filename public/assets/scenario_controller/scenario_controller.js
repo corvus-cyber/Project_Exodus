@@ -51,7 +51,11 @@ function updateDeath(){
     // console.log(typeof deathCounter, "deathCounter in local storage before update");
 
     //set the new updated death count as the local storage
-    localStorage.setItem("death", deathCounter)
+    localStorage.setItem("death", deathCounter);
+
+    //take the user to the death page
+    window.location.replace("../../death.html")
+
 }
 
 

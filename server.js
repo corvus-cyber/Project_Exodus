@@ -1,5 +1,4 @@
 var express = require("express");
-
 var exphbs = require("express-handlebars");
 
 // Setting up port and requiring models for syncing
@@ -11,7 +10,7 @@ var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
-var Highscore = require("./models/highscore.js");
+// var Highscore = require("./models/highscore.js");
 
 // Set Handlebars.
 
@@ -22,8 +21,6 @@ app.set("view engine", "handlebars");
 
 var routes = require("./routes/exodus-controller.js");
 app.use(routes);
-//require("./routes/api-routes.js")(app);
-
 
 db.sequelize.sync();
 app.listen(PORT, function() {

@@ -27,7 +27,7 @@ Retro is having a comeback. We see it in clothing, in film, in music, why not ga
 1. Front End 
     * Wyatt Hancock and Jameson Midgley 
 2. Backend
-    * Dilan Lee, Raj and Sam Greilick 
+    * Dilan Lee, Rajesh Baduwal and Sam Greilick 
 3. Story Builder 
 *   Ammon Jeffery 
 

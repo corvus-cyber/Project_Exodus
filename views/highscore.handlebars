@@ -1,11 +1,11 @@
-        <div class="container"> 
+    <div class="container"> 
             <!-- Title -->
-            <div class="row mt-5 position-static">
+            <div class="row mt-5 mb-5">
                 <div class="col-md-12">  
                     <h1>
                         <div class="d-flex justify-content-center">
                             <span id="E">E</span>
-                            <span id="X">X</span>
+                            <span id="X">X</span> 
                             <span id="O">O</span>
                             <span id="D">D</span>
                             <span id="U">U</span>
@@ -15,22 +15,24 @@
                 </div>  
             </div>
             <!--High Score Display-->
+            <div class="row table-title pb-2 mb-1">
+                <div class="col name" style="text-align: center;">
+                <h4>Name</h4>
+                </div>
+                <div class="col deathchart">
+                <h4>Number of Deaths</h4>
+                </div>
+            </div>
             <div class="row mb-5 justify-content-center">
-                <div class="col-md-8 options">
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col"></th>
-                            <th scope="col">Name</th>
-                            <th scope="col float-right">Number of Deaths</th>
-                          </tr>
-                        </thead>
-                        <tbody>
+                <div class="col-md-9 options tableFixHead">
+                    <table class="table" >
+                        
+                        <tbody >
                             {{#each highscore_data}}
                           <tr>
                             <th scope="row"></th>
-                            <td>{{username}}</td>
-                            <td>{{score}}</td>
+                            <td scope="col">{{username}}</td>
+                            <td scope="col">{{score}}</td>
                           </tr>
                           {{/each}}
                         </tbody>

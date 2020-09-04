@@ -1,21 +1,20 @@
-#evaporate{
+#evaporate {
   display: none;
 }
 
-.evaporate{
+.evaporate {
   display: none;
 }
 
-.logo{
+.logo {
   max-width: 8%;
 }
 
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
 
-
-.button-styling{
+.button-styling {
   background-color: black;
   border-color: black;
   box-shadow: 0 0 7px;
@@ -25,14 +24,14 @@ body{
 }
 
 /* change cursor to hand hover effect */
-.exodus span { 
-  cursor: pointer
+.exodus span {
+  cursor: pointer;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
 
 .description {
-  font-family: 'Source Code Pro', monospace;  
+  font-family: "Source Code Pro", monospace;
   font-size: 20px;
   font-weight: bold;
   width: 400px;
@@ -76,11 +75,11 @@ body{
 }
 
 .base-timer__path-remaining.lightgrey {
-  color: 	#F5F5F5;
+  color: #f5f5f5;
 }
 
 .base-timer__path-remaining.grey {
-  color: 	#C0C0C0;
+  color: #c0c0c0;
 }
 
 .base-timer__circle {
@@ -88,11 +87,21 @@ body{
 }
 
 @keyframes fade-in-out {
-  0%       {opacity: 0.2}
-  15%      {opacity: 1}
-  50%      {opacity: 0.2}
-  65%      {opacity: 1}
-  100%     {opacity: 0.2}
+  0% {
+    opacity: 0.2;
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
 }
 
 .base-timer__label {
@@ -105,7 +114,7 @@ body{
   justify-content: center;
   font-size: 35px;
   color: white;
-  opacity: .8;
+  opacity: 0.8;
 }
 
 footer {
@@ -113,10 +122,23 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  opacity: .50;
-};
+  opacity: 0.5;
+}
 
-
-
-
-
+.tableFixHead {
+  overflow-y: auto;
+  height: 800px;
+}
+.tableFixHead thead th {
+  position: sticky;
+  top: 0;
+}
+.tableFixHead,
+table {
+  /* border-collapse: collapse; */
+  width: 100%;
+}
+th,
+td {
+  padding: 8px 16px;
+}

@@ -125,6 +125,19 @@ footer {
   opacity: 0.5;
 }
 
+
+/* HIGHSCORE TABLE */
+.table-title{
+  font-weight: bold; 
+}
+
+.name{
+  margin-left: -3%
+}
+.deathchart{
+  margin-left: -6%
+}
+
 .tableFixHead {
   overflow-y: auto;
   height: 800px;

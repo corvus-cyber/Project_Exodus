@@ -25,7 +25,8 @@ let scenario_3={
                     '“I see the solution didn’t work.” Genuine regret permeates the doctor’s voice “That’s really too bad. I had high hopes for you.”',
                     "You try to get up, but the doctor places his foot on your chest, holding you to the floor. You wriggle and writhe, desperately clawing at his pant legs in vain. You see the doctor pick up a brown cylinder with multiple needles on one end. With a grunt, the doctor rams the device into your neck. You gasp as you feel something cold spread throughout your body. The room begins to spin and darken. Just as everything goes black you hear,",
                     '“We’ll just have to try again.”'],
-            actions:[],
+            altText:["You launch yourself at the doctor, scalpel in hand. With a growl, you slash at his back, opening a wide gash. The doctor turns you look at you, bloodshot eyes blazing with rage. He knocks the scalpel from your hand and kicks you in the stomach. You double over, falling backwards. The doctor grabs a pair of scissors from the table, leaps on top of you and begins stabbing you over and over..."],
+            actions:["killPlayer", "attackDoc"],
             toScenario: 2
         },
         {

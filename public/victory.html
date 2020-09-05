@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/rpg-flicker.css" type="text/css"/>
+        <link rel="stylesheet" href="./css/house-flicker.css" type="text/css" />
+        <link rel="stylesheet" href="./css/style.css" type="text/css">
+        <link rel="stylesheet" href="./css/fade.css" type="text/css">
 
         <title>Exodus</title>
         <script src="https://code.jquery.com/jquery.js"></script>
@@ -53,39 +59,25 @@
                    <img src="./assets/img/door.png" class="img-fluid door evaporate"> 
                 </div>
             </div>
-        </div>
-        <!--Door Open IMG-->
-        <div class="row mt-5">
-            <div class="col-md-12 d-flex justify-content-center">
-                <img src="./assets/img/door.png" class="img-fluid door evaporate">
+            <!--Go to HighScore Button-->
+            <div class="row mt-5 mb-5 d-flex justify-content-center">
+                <div class="col-md-6 submitform text-center">            
+                        <button onclick="window.location.href='/rpg.html'" type="submit" class="btn btn-dark btn-lg button-styling" id="submit-score">Escape The Nightmare And Enter Your Score</button>
+                </div>
             </div>
-        </div>
-        <!--Go to HighScore Button-->
-        <div class="row mt-5 mb-5 d-flex justify-content-center">
-            <div class="col-md-6 submitform text-center">
-            <button onclick="window.location.href='/highscore'" class="btn btn-dark btn-lg button-styling" id="highscore-button">Escape The Nightmare
-                And Enter Your Score</button>
-
-                <!-- <button onclick="window.location='http://www.example.com';">Visit Page Now</button> -->
-                
+            <!-- LOGO IMG -->
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-center">
+                   <img src="./assets/favicon/inverse.png" class="img-fluid logo" id="house"> 
+                </div>
             </div>
-        </div>
-        <!-- LOGO IMG -->
-        <div class="row">
-            <div class="col-md-12 d-flex justify-content-center">
-                <img src="./assets/favicon/inverse.png" class="img-fluid logo" id="house">
+        </div> 
+        <!-- Sound controller -->
+        <footer>
+            <div class="text-center">
+                <audio controls loop autoplay="true" id="backgroundMusic">    <source src="/assets/sounds/Come-Play-With-Me.mp3"> </audio>
             </div>
-        </div>
-    </div>
-    <!-- Sound controller -->
-    <footer>
-        <div class="text-center">
-            <audio controls loop autoplay="true" id="backgroundMusic">
-                <source src="/assets/sounds/Come-Play-With-Me.mp3"> </audio>
-        </div>
-    </footer>
-
-    <script type="module" src="./assets/scenario_controller/scenario_controller.js"></script>
-</body>
-
+        </footer>
+        
+	</body>
 </html>

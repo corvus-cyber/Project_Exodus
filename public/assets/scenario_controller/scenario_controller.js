@@ -9,6 +9,7 @@ console.log(scenarios);
 //-------------------global variables-------------------
 let scenarioDesc = document.getElementById("scDesc")
 let scenarioOpti = document.getElementById("scOpt")
+let name = document.getElementById("log-score")
 
 let scenarioVal = 0;
 let currentScen;
@@ -28,28 +29,43 @@ $("#submit-score").on("click", function (event) {
 
     event.preventDefault();
 
-    let deathCounter = parseInt(localStorage.getItem("death"));
+// This checks to see if the username input field is empty and if it is....
+// it alerts the user with "Please enter a username".
 
-    //information that we will save to database
-    const newUser = {
-        username: $("#log-score").val().trim(),
-        score: deathCounter
-    };
+    if (name.value == "") {
+        alert ("Please enter a username")
+    }   
+        else { 
+            let deathCounter = parseInt(localStorage.getItem("death"));
     
-    //connects to the /highscore route in exodus-controller.js and posts to the route
-    $.ajax("/highscore", {
-        type: "POST",
-        data: newUser
-    }).then(
-        function () {
-            console.log("new user created")
-            location.reload();
+        //information that we will save to database
+        const newUser = {
+            username: $("#log-score").val().trim(),
+            score: deathCounter
+        };
+        
+        //connects to the /highscore route in exodus-controller.js and posts to the route
+        $.ajax("/highscore", {
+            type: "POST",
+            data: newUser
+        }).then(
+            function(){
+                console.log("new user created")
+                location.reload();
+            }
+        )
+    
+        //The game is over now, set the local storage death count to default 0
+        localStorage.setItem("death", 0)
+    
         }
-    )
+    }  
+);
 
-    //The game is over now, set the local storage death count to default 0
-    localStorage.setItem("death", 0)
-});
+// This checks to see if the username input field is empty and if it is....
+// it alerts the user with "Please enter a username".
+
+
 
 //This function increases the death count by 1
 function updateDeath(){

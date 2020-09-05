@@ -10,6 +10,7 @@ console.log(scenarios);
 //-------------------global variables-------------------
 let scenarioDesc = document.getElementById("scDesc")
 let scenarioOpti = document.getElementById("scOpt")
+let name = document.getElementById("log-score")
 
 let scenarioVal = 0;
 let currentScen;
@@ -20,9 +21,16 @@ let selectedOpt =0;
 $("#submit-score").on("click", function(event){
     
     event.preventDefault();
+    
+// This checks to see if the username input field is empty and if it is....
+// it alerts the user with "Please enter a username".
+
+    if (name.value == "") {
+        alert ("Please enter a username")
+    }
 
     let deathCounter = parseInt(localStorage.getItem("death"));
-
+    
     //information that we will save to database
     const newUser = {
         username: $("#log-score").val().trim(),
@@ -42,7 +50,14 @@ $("#submit-score").on("click", function(event){
 
     //The game is over now, set the local storage death count to default 0
     localStorage.setItem("death", 0)
+
+    
 });
+
+// This checks to see if the username input field is empty and if it is....
+// it alerts the user with "Please enter a username".
+
+
 
 //This function increases the death count by 1
 function updateDeath(){

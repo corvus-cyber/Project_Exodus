@@ -12,7 +12,7 @@ let scenario_4={
         {
             id: 1,
             title: "Search the Top of the Desk",
-            text: ["Other than the phone, there may be something useful on the desk. You approach the desk and begin sifting through the piles of papers and folders, opening the drawers in turn, trying to find anything useful.",
+            text: ["Other than the phone, there may be something useful on the desk. You begin sifting through the piles of papers and folders on the desk, opening the drawers in turn, trying to find anything useful.",
                     "On top of the desk lying face down is a small picture. In it, a man in a doctor’s coat has hoisted a little girl into the air, her face radiant with glee. In the corner of the picture, you make out what appears to be a large white dog. What’s odd about this photo is that the doctor's face has been burned away."
         ],
             actions:["selfDestruct"],
@@ -20,10 +20,10 @@ let scenario_4={
         },
         {
             id: 2,
-            title: "Grab the Bandages",
-            text: ["It appears that some of your stitches are still seeping blood and plasma. You quickly grab the bandages on the table and wrap your wounds. Not the best job, but it’ll work for now."],
-            actions:["selfDestruct"],
-            toScenario: 0
+            title: "Search the Drawers",
+            text: ["In the top drawer, you find a ring of keys. You palm them quickly. They will probably come in handy later."],
+            actions:["selfDestruct, getKey"],
+            toScenario: 3
         },
         {
             id: 3,

@@ -27,13 +27,12 @@ let scenario_4={
         },
         {
             id: 3,
-            title: "Look Through the Journal",
-            text: ["You decide to look through the journal to gain clues about why you are here. It appears to be some sort of logbook. The pages are worn and yellowed with age, although the latest appear to be freshly made.",
-                    "Day 2: Subject 213 is still responding well to the solution. No visible changes.",
-                    "Day 3: Prep work for operation complete. Subject ready for experiment. Graft 1-5 success. Subject shows promise for organ transfer.",
-                    "This writing goes on for pages. It’s clear that you aren’t the first person trapped here. You still have no idea what this place is, but one thing is clear: you need to get the hell out."   ],
-            actions:[""],
-            toScenario: 0
+            title: "Search the Closet",
+            text: ["You open the closet to find a cylindrical tank surrounded by beeping machines. Inside the tank floating in a fluorescent green liquid is a little girl, her face looks as though she were sleeping peacefully. You note several stitches on her head and throat.",
+                    "Footsteps behind you cause you to whirl around. Before you stands the doctor, his eyes bloodshot with rage. Before you can react, the doctor's hand whips out, slicing your throat with a scalpel. You grasp your throat, trying in vain to stop the bleeding. You collapse on the floor, blood gurgling in your throat as everything fades to black.",
+                  ],
+            actions:["killPlayer"],
+            toScenario: 3
         },
         {
             id: 4,

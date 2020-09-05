@@ -81,7 +81,6 @@ function updateDeath(){
 
 }
 
-<<<<<<< HEAD
 //When the user beats the game and clicks on "escapte the Nightmare and enter your score", they will be taken to the highscore page
 $("#highscore-button").on("click", function(event){
     console.log("connected");
@@ -95,11 +94,9 @@ $("#highscore-button").on("click", function(event){
             console.log("You won, redirecting to the highscore page")
         })
 });
-=======
 function win(){
     window.location.replace("../../victory.html")
 };
->>>>>>> 82cf2436990e1d9d219fc7de4593278eb5cdb1d3
 
 function alpha(){
     renderScenarioOpt()

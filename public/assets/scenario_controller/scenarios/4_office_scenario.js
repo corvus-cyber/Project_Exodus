@@ -4,8 +4,8 @@ let scenario_4={
     text: [
         "As you approach the door you begin to make out the characters on the tarnished plaque: Dr. Tucker",
         "You open the door and walk in to find yourself within an office room. Stacks of books, binders, and papers lay scattered across the floor. Wooden shelves stand along the walls of the room, weathered and worn. Each shelf is lined with jars of all shapes and sizes, each one filled with luminescent liquids and disembodied human parts.",
-        "A single flickering light faintly illuminates the room. The white paint on the walls is peeling, and the parts that aren’t are covered in graffiti. Pools of dark ichor cover the floor, faintly reflecting the light above. Several  syringes lie scattered across the floor, some of them partially filled with unknown liquids.",
-        "You slowly slide off the bed onto your feet. The cold tiles beneath you send a shiver up your spine. You can’t remember anything about how you got here or who you even are. You quickly scan the room for anything of use. Beside you resting on a rusted metal table is what appears to be an open journal of some kind, as well as what seem to be several rolls of bandages. A solitary metal door stands across the room from you.",
+        "In the center of the room stands a desk that is completely cluttered. You can however make out a corded office phone sitting on the desk.",
+        "On the left wall, there is a closet door. A faint green glow peeks through the crack underneath the doorway.",
         "What do you do?"
     ],
     options: [

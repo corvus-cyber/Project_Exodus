@@ -36,9 +36,16 @@ let scenario_4={
         },
         {
             id: 4,
+            title: "Pick Up the Phone",
+            text: ["You grab the receiver  and place it to your ear. No dial tone, no automated voice, nothing. Oh well. It was worth a shot."],
+            actions:[],
+            toScenario: 3
+        },
+        {
+            id: 5,
             title: "Leave the Room",
             text: [""],
-            actions:[],
+            actions: [],
             toScenario: 1
         }]
 };

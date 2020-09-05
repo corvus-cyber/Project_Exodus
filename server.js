@@ -19,7 +19,7 @@ app.set("view engine", "handlebars");
 var routes = require("./routes/exodus-controller.js");
 app.use(routes);
 
-db.sequelize.sync({force:true});
+db.sequelize.sync();
 app.listen(PORT, function() {
     console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
 });

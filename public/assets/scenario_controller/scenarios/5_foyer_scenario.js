@@ -3,10 +3,9 @@ let scenario_5={
     title: "",
     text: [
         "It takes you a few moments to find the correct key, but you finally unlock the door. You open the door and step through. You find yourself in a room that is illuminated only by the pale moonlight shining through the windows on the far wall.",
-        "The only light in the room flows from the surgical light apparatus shining down upon the operating room table, illuminating what looks to be a large white and brown dog. It’s side has been sliced open, its flesh held open by skinny hooks, while numerous colored tubs stretch from large whirring machines, connecting to various parts of the dog’s insides.",
-        "Standing above the dog is what appears to be a doctor, bent over the operating table rummaging through the dog’s insides. His back is turned towards you as he is completely focused on his work. The dog manages to look up at the doctor, it’s eyes pleading. Your heart skips a beat as the dog opens its mouth….and begins to speak.",
-        '“Da---ddy….It Hurts…”',
-        '“Now, now, Nina,” the doctor said in hushed, caring tones, “We’ll make you better yet. Trust Daddy.”',
+        "After a moment, you realize that you are in some sort of waiting room, or what’s left of it. Faded magazines line the floor, aged couches with rips and stitches are strewn about the room, the ceiling seems to be caving in at one spot. Straight ahead is a glass door. Surely that has to be the exit.",
+        "You hear a groaning ahead of you. You turn and gasp as a hulking mass emerges from the shadows, an ungodly abomination with body parts stitched all over it. Multiple arms protrude from its torso, its many gnarled fingers reach towards you. A mass of tubes are attached to its chest, transporting some sort of liquid. Metal rods protrude from its joints, causing the abomination to shamble awkwardly.",
+        '“No One Leaves….” It groans as it begins to walk towards you, “Doctor’s orders.”',
         "What do you do?"
     ],
     options: [

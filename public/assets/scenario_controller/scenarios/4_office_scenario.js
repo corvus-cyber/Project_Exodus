@@ -1,5 +1,5 @@
 let scenario_4={
-    id: 4,
+    id: 3,
     title: "",
     text: [
         "As you approach the door you begin to make out the characters on the tarnished plaque: Dr. Tucker",

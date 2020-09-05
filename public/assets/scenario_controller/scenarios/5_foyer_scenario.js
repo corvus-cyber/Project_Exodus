@@ -1,8 +1,8 @@
-let scenario_3={
-    id: 3,
+let scenario_5={
+    id: 4,
     title: "",
     text: [
-        "The door is just wide enough for you to squeeze through without making much sound, but as you step into something cold and wet, you quickly wish you hadn’t. The entire floor is covered with spatterings of blood and bile, almost as if someone had tried to make a Jackson Pollock painting on the floor.",
+        "It takes you a few moments to find the correct key, but you finally unlock the door. You open the door and step through. You find yourself in a room that is illuminated only by the pale moonlight shining through the windows on the far wall.",
         "The only light in the room flows from the surgical light apparatus shining down upon the operating room table, illuminating what looks to be a large white and brown dog. It’s side has been sliced open, its flesh held open by skinny hooks, while numerous colored tubs stretch from large whirring machines, connecting to various parts of the dog’s insides.",
         "Standing above the dog is what appears to be a doctor, bent over the operating table rummaging through the dog’s insides. His back is turned towards you as he is completely focused on his work. The dog manages to look up at the doctor, it’s eyes pleading. Your heart skips a beat as the dog opens its mouth….and begins to speak.",
         '“Da---ddy….It Hurts…”',

@@ -11,29 +11,18 @@ let scenario_5={
     options: [
         {
             id: 1,
-            title: "Look for Something Useful",
-            text: ["You quickly scan the room. To your immediate left is a sink, rusted and stained. Lying in the sink is a bloodied scalpel. You slowly reach over and pick up the scalpel. You never know when you might need this. The doctor hasn’t noticed you yet."],
-            actions:["selfDestruct",],
-            toScenario: 2
+            title: "Run for the Door",
+            text: ["You need to get out of here. You run towards the door and begin trying keys frantically. Something large collides with you and fly into the wall, knocking the wind out of you. You cough, trying to get back on your feet as the monster approaches you. With curled fists, it begins slamming its fists into you, again and again...."],
+            actions:["killPlayer"],
+            toScenario: 4
         },
         {
             id: 2,
-            title: "Attack the Doctor",
-            text: ["Despite yourself, you feel a rage growing deep inside your gut. This man is sick, and someone needs to stop him.",
-                    "You launch yourself at the doctor, landing on his back and begin pounding his head with your fists. With a single fluid motion, the doctor grabs your wrist and throws you to the ground. You land flat on your back, and feel the wind forcibly expelled from your lungs.",
-                    '“I see the solution didn’t work.” Genuine regret permeates the doctor’s voice “That’s really too bad. I had high hopes for you.”',
-                    "You try to get up, but the doctor places his foot on your chest, holding you to the floor. You wriggle and writhe, desperately clawing at his pant legs in vain. You see the doctor pick up a brown cylinder with multiple needles on one end. With a grunt, the doctor rams the device into your neck. You gasp as you feel something cold spread throughout your body. The room begins to spin and darken. Just as everything goes black you hear,",
-                    '“We’ll just have to try again.”'],
-            altText:["You launch yourself at the doctor, scalpel in hand. With a growl, you slash at his back, opening a wide gash. The doctor turns you look at you, bloodshot eyes blazing with rage. He knocks the scalpel from your hand and kicks you in the stomach. You double over, falling backwards. The doctor grabs a pair of scissors from the table, leaps on top of you and begins stabbing you over and over..."],
-            actions:["killPlayer", "attackDoc"],
-            toScenario: 2
-        },
-        {
-            id: 3,
-            title: "Leave the Room",
-            text: [""],
-            actions:[],
-            toScenario: 1
+            title: "Defend Yourself",
+            text: ["After looking around frantically for a weapon and finding none, you hold up your fists. You aren’t going to go down easily. When the monster shambles into striking range, you begin punching it with all your might. It feels like punching a brick wall. A wheezing laughter emanates from the monster’s throat as it grabs your head in its hands and with a swift motion, snaps your neck. ",
+            ],
+            actions:["killPlayer", "attackMon"],
+            toScenario: 4
         },
         ]
 };

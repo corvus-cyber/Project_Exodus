@@ -20,47 +20,7 @@ let selectedOpt = 0;
 let hasKey = false;
 let hasScalp = false;
 
-$(".Begin").on("click", function (event) {
-    event.preventDefault();
-    localStorage.setItem("death", 0);
-});
 
-$("#submit-score").on("click", function (event) {
-
-    event.preventDefault();
-
-// This checks to see if the username input field is empty and if it is....
-// it alerts the user with "Please enter a username".
-
-    if (name.value == "") {
-        alert ("Please enter a username")
-    }   
-        else { 
-            let deathCounter = parseInt(localStorage.getItem("death"));
-    
-        //information that we will save to database
-        const newUser = {
-            username: $("#log-score").val().trim(),
-            score: deathCounter
-        };
-        
-        //connects to the /highscore route in exodus-controller.js and posts to the route
-        $.ajax("/highscore", {
-            type: "POST",
-            data: newUser
-        }).then(
-            function(){
-                console.log("new user created")
-                location.reload();
-            }
-        )
-    
-        //The game is over now, set the local storage death count to default 0
-        localStorage.setItem("death", 0)
-    
-        }
-    }  
-);
 
 // This checks to see if the username input field is empty and if it is....
 // it alerts the user with "Please enter a username".
@@ -77,7 +37,16 @@ function updateDeath(){
     localStorage.setItem("death", deathCounter);
 
     //take the user to the death page
-    window.location.replace("../../death.html")
+
+    $(scenarioOpti.children).remove();
+
+    let opt = `<button id="contDeath" type="button" class="btn btn-dark button-styling">Continue... </button>`
+    scenarioOpti.insertAdjacentHTML("beforeend", opt);
+    let toDeath = document.getElementById("contDeath")
+    toDeath.addEventListener("click",function () {
+        window.location.replace("../../death.html")
+    })
+    return
 
 }
 
@@ -143,6 +112,7 @@ function renderScenarioOpt() {
         if (scenarios[currentScen].options[optionVal].actions.includes("killPlayer")) {
             console.log("You has died!!!!!");
             updateDeath();
+            return
         }
 
         if (scenarios[currentScen].options[optionVal].actions.includes("winState")) {

@@ -1,9 +1,9 @@
-let scenario_1={
-    id: 0,
+let scenario_4={
+    id: 4,
     title: "",
     text: [
-        "The first thing you notice when you awaken is a deep, aching pain throughout your entire body. Your head throbs painfully, as though it were being squeezed in a vice grip. You look down and notice that all you are wearing is a soiled hospital gown, covered with stains from God knows what. You are lying on some kind of hospital bed that’s been stained with blood, some of it fresh.",
-        "Slowly, you lift yourself to an upright sitting position. A soft, cold breeze whistles through the cracks of a boarded window behind you.",
+        "As you approach the door you begin to make out the characters on the tarnished plaque: Dr. Tucker",
+        "You open the door and walk in to find yourself within an office room. Stacks of books, binders, and papers lay scattered across the floor. Wooden shelves stand along the walls of the room, weathered and worn. Each shelf is lined with jars of all shapes and sizes, each one filled with luminescent liquids and disembodied human parts.",
         "A single flickering light faintly illuminates the room. The white paint on the walls is peeling, and the parts that aren’t are covered in graffiti. Pools of dark ichor cover the floor, faintly reflecting the light above. Several  syringes lie scattered across the floor, some of them partially filled with unknown liquids.",
         "You slowly slide off the bed onto your feet. The cold tiles beneath you send a shiver up your spine. You can’t remember anything about how you got here or who you even are. You quickly scan the room for anything of use. Beside you resting on a rusted metal table is what appears to be an open journal of some kind, as well as what seem to be several rolls of bandages. A solitary metal door stands across the room from you.",
         "What do you do?"
@@ -36,7 +36,7 @@ let scenario_1={
         },
         {
             id: 4,
-            title: "Go Through the Door",
+            title: "Leave the Room",
             text: [""],
             actions:[],
             toScenario: 1

@@ -11,11 +11,12 @@ let scenario_4={
     options: [
         {
             id: 1,
-            title: "Look down and Examine Yourself",
-            text: ["You look down to better gauge your physical state, and it becomes instantly clear why you ache so much. Your arms and legs are covered in stitches surrounding patches of skin that are clearly not your own. Some of them are light, others are dark. One patch on your right arm appears to be rotten and decaying."],
-            actions:["",
+            title: "Search the Top of the Desk",
+            text: ["Other than the phone, there may be something useful on the desk. You approach the desk and begin sifting through the piles of papers and folders, opening the drawers in turn, trying to find anything useful.",
+                    "On top of the desk lying face down is a small picture. In it, a man in a doctor’s coat has hoisted a little girl into the air, her face radiant with glee. In the corner of the picture, you make out what appears to be a large white dog. What’s odd about this photo is that the doctor's face has been burned away."
         ],
-            toScenario: 0,
+            actions:["selfDestruct"],
+            toScenario: 3,
         },
         {
             id: 2,

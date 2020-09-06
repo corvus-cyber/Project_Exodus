@@ -63,6 +63,7 @@ $("#highscore-button").on("click", function(event){
             console.log("You won, redirecting to the highscore page")
         })
 });
+
 function win(){
     window.location.replace("../../victory.html")
 };

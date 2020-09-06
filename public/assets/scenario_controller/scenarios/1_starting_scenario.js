@@ -21,7 +21,7 @@ let scenario_1={
             id: 2,
             title: "Grab the Bandages",
             text: ["It appears that some of your stitches are still seeping blood and plasma. You quickly grab the bandages on the table and wrap your wounds. Not the best job, but it’ll work for now."],
-            actions:["selfDestruct"],
+            actions:["selfDestruct","timer"],
             toScenario: 0
         },
         {

@@ -2,9 +2,11 @@
 import scenario_1 from "./scenarios/1_starting_scenario.js"
 import scenario_2 from "./scenarios/2_scenario_hallway2.js"
 import scenario_3 from "./scenarios/3_operation_scenario.js"
+import scenario_4 from "./scenarios/4_office_scenario.js"
+import scenario_5 from "./scenarios/5_foyer_scenario.js"
 //Due to a quirk in the way the import works with us accessing the data you need to follow the schema below for pushing objects
 let scenarios = [];
-scenarios.push(scenario_1.scenario_1, scenario_2.scenario_2, scenario_3.scenario_3);
+scenarios.push(scenario_1.scenario_1, scenario_2.scenario_2, scenario_3.scenario_3, scenario_4.scenario_4, scenario_5.scenario_5);
 console.log(scenarios);
 //-------------------global variables-------------------
 let scenarioDesc = document.getElementById("scDesc")

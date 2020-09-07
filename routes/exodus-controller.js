@@ -12,13 +12,11 @@ router.get("/", function (req, res) {
 router.get("/highscore", function (req, res) {
     db.Highscore.findAll({}).then(function (data) {
         data = JSON.parse(JSON.stringify(data))
-        console.log(data);
         res.render("highscore", { highscore_data: data });
     })
 })
 
 router.post("/highscore", function (req, res) {
-    console.log(req.body)
     db.Highscore.create({
         username: req.body.username,
         score: req.body.score

@@ -140,7 +140,7 @@ footer {
 
 .tableFixHead {
   overflow-y: auto;
-  height: 800px;
+  height: 300px;
 }
 .tableFixHead thead th {
   position: sticky;
@@ -154,4 +154,11 @@ table {
 th,
 td {
   padding: 8px 16px;
+}
+
+
+/* username cannot be empty */
+#error {
+  letter-spacing: 0;
+  margin-top: 20px;
 }

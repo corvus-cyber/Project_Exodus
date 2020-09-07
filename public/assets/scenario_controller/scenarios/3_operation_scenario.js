@@ -6,7 +6,7 @@ let scenario_3={
         "The only light in the room flows from the surgical light apparatus shining down upon the operating room table, illuminating what looks to be a large white and brown dog. It’s side has been sliced open, its flesh held open by skinny hooks, while numerous colored tubs stretch from large whirring machines, connecting to various parts of the dog’s insides.",
         "Standing above the dog is what appears to be a doctor, bent over the operating table rummaging through the dog’s insides. His back is turned towards you as he is completely focused on his work. The dog manages to look up at the doctor, it’s eyes pleading. Your heart skips a beat as the dog opens its mouth….and begins to speak.",
         '“Da---ddy….It Hurts…”',
-        '“Now, now, Nina,” the doctor said in hushed, caring tones, “We’ll make you better yet. Trust Daddy.”',
+        '“Now, now, Nora,” the doctor said in hushed, caring tones, “We’ll make you better yet. Trust Daddy.”',
         "What do you do?"
     ],
     options: [

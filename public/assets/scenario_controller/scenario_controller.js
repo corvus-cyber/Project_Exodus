@@ -11,6 +11,7 @@ console.log(scenarios);
 //-------------------global variables-------------------
 let scenarioDesc = document.getElementById("scDesc")
 let scenarioOpti = document.getElementById("scOpt")
+let name = document.getElementById("log-score")
 
 let scenarioVal = 0;
 let currentScen;
@@ -21,37 +22,12 @@ let selectedOpt = 0;
 let hasKey = false;
 let hasScalp = false;
 
-$(".Begin").on("click", function (event) {
-    event.preventDefault();
-    localStorage.setItem("death", 0);
-});
 
-$("#submit-score").on("click", function (event) {
 
-    event.preventDefault();
+// This checks to see if the username input field is empty and if it is....
+// it alerts the user with "Please enter a username".
 
-    let deathCounter = parseInt(localStorage.getItem("death"));
 
-    //information that we will save to database
-    const newUser = {
-        username: $("#log-score").val().trim(),
-        score: deathCounter
-    };
-    
-    //connects to the /highscore route in exodus-controller.js and posts to the route
-    $.ajax("/highscore", {
-        type: "POST",
-        data: newUser
-    }).then(
-        function () {
-            console.log("new user created")
-            location.reload();
-        }
-    )
-
-    //The game is over now, set the local storage death count to default 0
-    localStorage.setItem("death", 0)
-});
 
 //This function increases the death count by 1
 function updateDeath(){
@@ -63,9 +39,56 @@ function updateDeath(){
     localStorage.setItem("death", deathCounter);
 
     //take the user to the death page
-    window.location.replace("../../death.html")
+
+    $(scenarioOpti.children).remove();
+
+    let opt = `<button id="contDeath" type="button" class="btn btn-dark button-styling">Continue... </button>`
+    scenarioOpti.insertAdjacentHTML("beforeend", opt);
+    let toDeath = document.getElementById("contDeath")
+    toDeath.addEventListener("click",function () {
+        window.location.replace("../../death.html")
+    })
+    return
 
 }
+
+//When the user beats the game and clicks on "escapte the Nightmare and enter your score", they will be taken to the highscore page
+$("#submit-score").on("click", function (event) {
+
+    event.preventDefault();
+
+// This checks to see if the username input field is empty and if it is....
+// it alerts the user with "Please enter a username".
+
+    if (name.value == "") {
+        alert ("Please enter a username")
+    }   
+        else { 
+            let deathCounter = parseInt(localStorage.getItem("death"));
+    
+        //information that we will save to database
+        const newUser = {
+            username: $("#log-score").val().trim(),
+            score: deathCounter
+        };
+        
+        //connects to the /highscore route in exodus-controller.js and posts to the route
+        $.ajax("/highscore", {
+            type: "POST",
+            data: newUser
+        }).then(
+            function(){
+                console.log("new user created")
+                location.reload();
+            }
+        )
+    
+        //The game is over now, set the local storage death count to default 0
+        localStorage.setItem("death", 0)
+    
+        }
+    }  
+);
 
 function win(){
     window.location.replace("../../victory.html")
@@ -129,6 +152,7 @@ function renderScenarioOpt() {
         if (scenarios[currentScen].options[optionVal].actions.includes("killPlayer")) {
             console.log("You has died!!!!!");
             updateDeath();
+            return
         }
 
         if (scenarios[currentScen].options[optionVal].actions.includes("winState")) {
@@ -171,130 +195,130 @@ function renderScenarioOpt() {
         
 
 
-        if (scenarios[currentScen].options[optionVal].actions.includes("timer")) {
-            console.log("");
-            let timer = document.getElementById("app")
-            timer.classList.remove("evaporate")
+        // if (scenarios[currentScen].options[optionVal].actions.includes("timer")) {
+        //     console.log("");
+        //     let timer = document.getElementById("app")
+        //     timer.classList.remove("evaporate")
 
-            // Timer Function
-            function timerLapse() {
-                const FULL_DASH_ARRAY = 283;
-                const WARNING_THRESHOLD = 10;
-                const ALERT_THRESHOLD = 5;
+        //     // Timer Function
+        //     function timerLapse() {
+        //         const FULL_DASH_ARRAY = 283;
+        //         const WARNING_THRESHOLD = 10;
+        //         const ALERT_THRESHOLD = 5;
 
-                const COLOR_CODES = {
-                    info: {
-                        color: "white"
-                    },
-                    warning: {
-                        color: "#F5F5F5",
-                        threshold: WARNING_THRESHOLD
-                    },
-                    alert: {
-                        color: "#C0C0C0",
-                        threshold: ALERT_THRESHOLD
-                    }
-                };
+        //         const COLOR_CODES = {
+        //             info: {
+        //                 color: "white"
+        //             },
+        //             warning: {
+        //                 color: "#F5F5F5",
+        //                 threshold: WARNING_THRESHOLD
+        //             },
+        //             alert: {
+        //                 color: "#C0C0C0",
+        //                 threshold: ALERT_THRESHOLD
+        //             }
+        //         };
 
-                const TIME_LIMIT = 10;
-                let timePassed = 0;
-                let timeLeft = TIME_LIMIT;
-                let timerInterval = null;
-                let remainingPathColor = COLOR_CODES.info.color;
-                document.getElementById("app").innerHTML = `
-        <div class="base-timer">
-        <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <g class="base-timer__circle">
-            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
-            <path
-                id="base-timer-path-remaining"
-                stroke-dasharray="283"
-                class="base-timer__path-remaining ${remainingPathColor}"
-                d="
-                M 50, 50
-                m -45, 0
-                a 45,45 0 1,0 90,0
-                a 45,45 0 1,0 -90,0
-                "
-            ></path>
-            </g>
-        </svg>
-        <span id="base-timer-label" class="base-timer__label">${formatTime(
-                    timeLeft
-                )}</span>
-        </div>
-        `;
+        //         const TIME_LIMIT = 10;
+        //         let timePassed = 0;
+        //         let timeLeft = TIME_LIMIT;
+        //         let timerInterval = null;
+        //         let remainingPathColor = COLOR_CODES.info.color;
+        //         document.getElementById("app").innerHTML = `
+        // <div class="base-timer">
+        // <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        //     <g class="base-timer__circle">
+        //     <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+        //     <path
+        //         id="base-timer-path-remaining"
+        //         stroke-dasharray="283"
+        //         class="base-timer__path-remaining ${remainingPathColor}"
+        //         d="
+        //         M 50, 50
+        //         m -45, 0
+        //         a 45,45 0 1,0 90,0
+        //         a 45,45 0 1,0 -90,0
+        //         "
+        //     ></path>
+        //     </g>
+        // </svg>
+        // <span id="base-timer-label" class="base-timer__label">${formatTime(
+        //             timeLeft
+        //         )}</span>
+        // </div>
+        // `;
 
-                startTimer();
+        //         startTimer();
 
-                function onTimesUp() {
-                    updateDeath()
-                    clearInterval(timerInterval);
-                }
+        //         function onTimesUp() {
+        //             updateDeath()
+        //             clearInterval(timerInterval);
+        //         }
 
-                function startTimer() {
-                    timerInterval = setInterval(() => {
-                        timePassed = timePassed += 1;
-                        timeLeft = TIME_LIMIT - timePassed;
-                        document.getElementById("base-timer-label").innerHTML = formatTime(
-                            timeLeft
-                        );
-                        setCircleDasharray();
-                        setRemainingPathColor(timeLeft);
-                        scenarioOpti.addEventListener("click", function () {
-                            return
-                        });
-                        if (timeLeft === 0) {
-                            onTimesUp();
-                        }
-                    }, 1000);
-                }
+        //         function startTimer() {
+        //             timerInterval = setInterval(() => {
+        //                 timePassed = timePassed += 1;
+        //                 timeLeft = TIME_LIMIT - timePassed;
+        //                 document.getElementById("base-timer-label").innerHTML = formatTime(
+        //                     timeLeft
+        //                 );
+        //                 setCircleDasharray();
+        //                 setRemainingPathColor(timeLeft);
+        //                 scenarioOpti.addEventListener("click", function () {
+        //                     return
+        //                 });
+        //                 if (timeLeft === 0) {
+        //                     onTimesUp();
+        //                 };
+        //             }, 1000);
+        //         }
 
-                function formatTime(time) {
-                    let seconds = time % 60;
+        //         function formatTime(time) {
+        //             let seconds = time % 60;
 
-                    if (seconds < 10) {
-                        seconds = `0${seconds}`;
-                    }
+        //             if (seconds < 10) {
+        //                 seconds = `0${seconds}`;
+        //             }
 
-                    return `${seconds}`;
-                }
+        //             return `${seconds}`;
+        //         }
 
-                function setRemainingPathColor(timeLeft) {
-                    const { alert, warning, info } = COLOR_CODES;
-                    if (timeLeft <= alert.threshold) {
-                        document
-                            .getElementById("base-timer-path-remaining")
-                            .classList.remove(warning.color);
-                        document
-                            .getElementById("base-timer-path-remaining")
-                            .classList.add(alert.color);
-                    } else if (timeLeft <= warning.threshold) {
-                        document
-                            .getElementById("base-timer-path-remaining")
-                            .classList.remove(info.color);
-                        document
-                            .getElementById("base-timer-path-remaining")
-                            .classList.add(warning.color);
-                    }
-                }
+        //         function setRemainingPathColor(timeLeft) {
+        //             const { alert, warning, info } = COLOR_CODES;
+        //             if (timeLeft <= alert.threshold) {
+        //                 document
+        //                     .getElementById("base-timer-path-remaining")
+        //                     .classList.remove(warning.color);
+        //                 document
+        //                     .getElementById("base-timer-path-remaining")
+        //                     .classList.add(alert.color);
+        //             } else if (timeLeft <= warning.threshold) {
+        //                 document
+        //                     .getElementById("base-timer-path-remaining")
+        //                     .classList.remove(info.color);
+        //                 document
+        //                     .getElementById("base-timer-path-remaining")
+        //                     .classList.add(warning.color);
+        //             }
+        //         }
 
-                function calculateTimeFraction() {
-                    const rawTimeFraction = timeLeft / TIME_LIMIT;
-                    return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
-                }
+        //         function calculateTimeFraction() {
+        //             const rawTimeFraction = timeLeft / TIME_LIMIT;
+        //             return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+        //         }
 
-                function setCircleDasharray() {
-                    const circleDasharray = `${(
-                        calculateTimeFraction() * FULL_DASH_ARRAY
-                    ).toFixed(0)} 283`;
-                    document
-                        .getElementById("base-timer-path-remaining")
-                        .setAttribute("stroke-dasharray", circleDasharray);
-                }
-            }
-            timerLapse();
-        }
+        //         function setCircleDasharray() {
+        //             const circleDasharray = `${(
+        //                 calculateTimeFraction() * FULL_DASH_ARRAY
+        //             ).toFixed(0)} 283`;
+        //             document
+        //                 .getElementById("base-timer-path-remaining")
+        //                 .setAttribute("stroke-dasharray", circleDasharray);
+        //         }
+        //     }
+        //     timerLapse();
+        // }
 
         if (scenarios[currentScen].options[optionVal].actions.includes("exit")) {
             
@@ -373,13 +397,7 @@ function renderScenarioOpt() {
                 }, 100);
             });
         }
-        
-        
-
-        
-
         return
-
     }
 };
 
@@ -430,10 +448,5 @@ function secondaryRender() {
             }, 100);
         });
     }
-    
-    
-
-    
-
     return
 }

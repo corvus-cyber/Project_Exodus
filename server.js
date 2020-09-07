@@ -10,15 +10,12 @@ var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
-// var Highscore = require("./models/highscore.js");
 
 // Set Handlebars.
-
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Requiring our routes
-
 var routes = require("./routes/exodus-controller.js");
 app.use(routes);
 

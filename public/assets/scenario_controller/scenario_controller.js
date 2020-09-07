@@ -99,7 +99,24 @@ function win(){
     $(scenarioOpti.children).remove();
     $(scenarioDesc.children).remove();
 
+    let winCont = `<p>You remember the scalpel you took from the operation room. It’s not much, but it’s better than nothing. </p>
+    <p>The abomination approaches you. It grabs your left arm as you slash wildly with your right, slicing open one of it’s chest tubes open. Green liquid sprays everywhere and the monster lets out a cry. You slash again and again, cutting gashes in the tubes. The abomination shrieks, letting go of you as it’s limbs try in vain to stop the liquid from spilling.</p>
+    <p>You run past the monster to the glass door. After a couple tries you find the right key, and the door opens.</p>
+    <p>You exit the building, and find yourself within an empty parking lot, surrounded by a forest. Your breath makes warm, white vapors in the  cool, night air, and all the trees around you look like gnarled hands trying to grasp the full moon floating in the sky. </p>
+    <p>You take off at a sprint, trying to put as much distance between you and the facility as possible. It doesn’t matter which direction you are headed, anywhere else is better than where you were. Your breathing becomes ragged, your throat dry and parched, your legs beg you to stop, still you run. Branches and bushes snag your gown as you run, ripping wide holes. You lose the scalpel and keys as you race with reckless abandon.</p>
+    <p>Finally, when you can run no more, you collapse. Panting, you look around at your surroundings. You are on the shoulder of an empty road. You make out headlights down the road to your left. You eagerly crawl towards the road, as red and blue lights appear on the top of the car.</p>`
+    
+    scenarioDesc.insertAdjacentHTML("beforeend",winCont)
+  
+    
+    
+
+    let opt = `<button id="contWin" type="button" class="btn btn-dark button-styling">Continue... </button>`
+    scenarioOpti.insertAdjacentHTML("beforeend", opt);
+    contWin.addEventListener("click",function () {
         window.location.replace("../../victory.html")
+    })
+    return
     return
     
 };

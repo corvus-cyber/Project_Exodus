@@ -22,7 +22,7 @@ let scenario_4={
             id: 2,
             title: "Search the Drawers",
             text: ["In the top drawer, you find a ring of keys. You palm them quickly. They will probably come in handy later."],
-            actions:["selfDestruct, getKey"],
+            actions:["selfDestruct","getKey"],
             toScenario: 3
         },
         {
@@ -38,7 +38,7 @@ let scenario_4={
             id: 4,
             title: "Pick Up the Phone",
             text: ["You grab the receiver  and place it to your ear. No dial tone, no automated voice, nothing. Oh well. It was worth a shot."],
-            actions:[],
+            actions:["selfDestruct",],
             toScenario: 3
         },
         {

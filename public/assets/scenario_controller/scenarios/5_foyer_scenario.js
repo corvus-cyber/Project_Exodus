@@ -12,7 +12,7 @@ let scenario_5={
         {
             id: 1,
             title: "Run for the Door",
-            text: ["You need to get out of here. You run towards the door and begin trying keys frantically. Something large collides with you and fly into the wall, knocking the wind out of you. You cough, trying to get back on your feet as the monster approaches you. With curled fists, it begins slamming its fists into you, again and again...."],
+            text: ["You need to get out of here. You run towards the door and begin trying keys frantically. Something large collides with you and you fly into the wall, knocking the wind out of you. You cough, trying to get back on your feet as the monster approaches you. With curled fists, it begins slamming its fists into you, again and again...."],
             actions:["killPlayer"],
             toScenario: 4
         },

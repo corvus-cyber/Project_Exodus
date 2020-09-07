@@ -13,7 +13,7 @@ let scenario_2={
             id: 1,
             title: "Open the Door Ahead of You",
             text: ["You approach the exit door. The door is locked, and you clearly don’t have the strength to force it. You’ll need to find the key."],
-            actions:[],
+            actions:["exit",],
             toScenario: 1
         },
         {

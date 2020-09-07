@@ -11,6 +11,7 @@ console.log(scenarios);
 let scenarioDesc = document.getElementById("scDesc")
 let scenarioOpti = document.getElementById("scOpt")
 let name = document.getElementById("log-score")
+let errorElement =document.getElementById ("error")
 
 let scenarioVal = 0;
 let currentScen;
@@ -26,7 +27,8 @@ $("#submit-score").on("click", function(event){
 // it alerts the user with "Please enter a username".
 
     if (name.value == "") {
-        alert ("Please enter a username")
+       errorElement.innerText = "Username cannot be empty!"
+       name.focus()
     }   
         else { 
             let deathCounter = parseInt(localStorage.getItem("death"));

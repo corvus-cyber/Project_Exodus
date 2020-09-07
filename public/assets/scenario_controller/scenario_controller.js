@@ -62,8 +62,8 @@ $("#submit-score").on("click", function (event) {
 // it alerts the user with "Please enter a username".
 
     if (name.value == "") {
-       errorElement.innerText = "Username cannot be empty!"
-       name.focus()
+        errorElement.innerText = "Username cannot be empty!"
+        name.focus()
     }   
         else { 
             let deathCounter = parseInt(localStorage.getItem("death"));
@@ -92,35 +92,6 @@ $("#submit-score").on("click", function (event) {
     }  
 );
 
-
-
-//This function increases the death count by 1
-function updateDeath(){
-    //get the current death count from local storage and add 1 to it
-    let deathCounter = parseInt(localStorage.getItem("death")) + 1;
-    // console.log(typeof deathCounter, "deathCounter in local storage before update");
-
-    //set the new updated death count as the local storage
-    localStorage.setItem("death", deathCounter);
-
-    //take the user to the death page
-    window.location.replace("../../death.html")
-
-}
-
-//When the user beats the game and clicks on "escapte the Nightmare and enter your score", they will be taken to the highscore page
-$("#highscore-button").on("click", function(event){
-    console.log("connected");
-    event.preventDefault();
-
-    //connects to the /highscore route in exodus-controller.js and posts to the route
-    $.ajax("/highscore", {
-        type: "GET"
-    }).then(
-        function(){
-            console.log("You won, redirecting to the highscore page")
-        })
-});
 function win(){
     window.location.replace("../../victory.html")
 };

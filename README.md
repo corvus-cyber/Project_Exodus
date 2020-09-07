@@ -7,8 +7,9 @@
 4. [Issues and Resolutions](##Issues_And_Resolutions)
 5. [Credits](##Credits)
 6. [Future Development](##Future_Development)
-7. [Link](##Link)
-8. [Screenshot](##Screenshot)
+8. [Wireframe](##Wireframe)
+8. [Link](##Link)
+9. [Screenshot](##Screenshot)
 
 
 ## Description 
@@ -35,10 +36,6 @@ Retro is having a comeback. We see it in clothing, in film, in music, why not ga
 - With the front end we had a lot of complicated css effects occuring at the same time on different objects or lines of text, and sometimes these effects could interfere with one another. In order to fix this we had to seperate a lot of the effects into seperate css files and only allow for the effects to be trigged in certain instances with javascript. 
 - 
 
-## Future_Development
-* One thing that we'd like to accomplish with future iterations of this application is to expand out the house. Due to us only having two weeks to accomplish this project we focused on only five rooms to prove the concept. To flesh out the story we'd like to have over twenty rooms, situated in an upstairs, main floor, and basement. 
-
-
 ## Credits 
 * Aakhya Signh for creating the typewriter css and js effect:
     - [Link To Codepen](https://codepen.io/aakhya/pen/NErZry)
@@ -48,6 +45,13 @@ Retro is having a comeback. We see it in clothing, in film, in music, why not ga
     - [Link to Codepen](https://codepen.io/geoffgraham/pen/yLywVbW)
 * Tremaine Eto for explaining how to create a fade in and out effect with css:
     - [Link to Website](https://medium.com/cloud-native-the-gathering/how-to-use-css-to-fade-in-and-fade-out-html-text-and-pictures-f45c11364f08)
+
+## Future_Development
+* One thing that we'd like to accomplish with future iterations of this application is to expand out the house. Due to us only having two weeks to accomplish this project we focused on only five rooms to prove the concept. To flesh out the story we'd like to have over twenty rooms, situated in an upstairs, main floor, and basement. 
+
+## Wireframe:
+![Img of the wireframe](./public/assets/screenshots/exodus-wireframe.png)
+
 
 ## Link 
 [Deployed Website](https://exodus-escape.herokuapp.com/)

@@ -93,7 +93,15 @@ $("#submit-score").on("click", function (event) {
 );
 
 function win(){
-    window.location.replace("../../victory.html")
+
+
+
+    $(scenarioOpti.children).remove();
+    $(scenarioDesc.children).remove();
+
+        window.location.replace("../../victory.html")
+    return
+    
 };
 
 function alpha(){
@@ -150,12 +158,12 @@ function renderScenarioOpt() {
 
         }
 
+        if (scenarios[currentScen].options[optionVal].actions.includes("heartBeat")) {
 
-        if (scenarios[currentScen].options[optionVal].actions.includes("killPlayer")) {
-            console.log("You has died!!!!!");
-            updateDeath();
-            return
+            //Place heartbeat que here
+
         }
+  
 
         if (scenarios[currentScen].options[optionVal].actions.includes("winState")) {
             console.log("You has died!!!!!");
@@ -190,9 +198,12 @@ function renderScenarioOpt() {
 
         if (scenarios[currentScen].options[optionVal].actions.includes("attackMon")) {
             console.log("You attk Mon!!!!!");
-            // if (hasScalp === true) {
+            if (hasScalp === true) {
+                win(
+                )
+                    return
+            }
 
-            // }
         }
         
 
@@ -206,6 +217,11 @@ function renderScenarioOpt() {
 
                 return secondaryRender()
             }
+        }
+        if (scenarios[currentScen].options[optionVal].actions.includes("killPlayer")) {
+            console.log("You has died!!!!!");
+            updateDeath();
+            return
         }
 
 
@@ -227,7 +243,6 @@ function renderScenarioOpt() {
     }
     //if  not same, render scenario
     else {
-
 
         console.log("Not Same");
         currentScen = scenarioVal

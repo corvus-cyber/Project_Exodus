@@ -14,7 +14,7 @@ let scenario_3={
             id: 1,
             title: "Look for Something Useful",
             text: ["You quickly scan the room. To your immediate left is a sink, rusted and stained. Lying in the sink is a bloodied scalpel. You slowly reach over and pick up the scalpel. You never know when you might need this. The doctor hasn’t noticed you yet."],
-            actions:["selfDestruct", "getScalp"],
+            actions:["selfDestruct", "getScalp","heartBeat"],
             toScenario: 2
         },
         {

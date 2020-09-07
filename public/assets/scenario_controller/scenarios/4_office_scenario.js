@@ -22,7 +22,7 @@ let scenario_4={
             id: 2,
             title: "Search the Drawers",
             text: ["In the top drawer, you find a ring of keys. You palm them quickly. They will probably come in handy later."],
-            actions:["selfDestruct","getKey"],
+            actions:["selfDestruct","getKey","heartBeat"],
             toScenario: 3
         },
         {

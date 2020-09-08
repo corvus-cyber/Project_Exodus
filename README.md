@@ -33,7 +33,7 @@ Retro is having a comeback. We see it in clothing, in film, in music, why not ga
 
 ## Issues_And_Resolutions 
 - With the front end we had a lot of complicated css effects occuring at the same time on different objects or lines of text, and sometimes these effects could interfere with one another. In order to fix this we had to seperate a lot of the effects into seperate css files and only allow for the effects to be trigged in certain instances with javascript. 
-- 
+- Making sure the Continous Integration and Continous Deployment process was not interrupted with every commit was a big learning curve.Merging only the final and fully functional codes to the master branch was very critical to make sure CI is occuring smoothly. 
 
 ## Future_Development
 * One thing that we'd like to accomplish with future iterations of this application is to expand out the house. Due to us only having two weeks to accomplish this project we focused on only five rooms to prove the concept. To flesh out the story we'd like to have over twenty rooms, situated in an upstairs, main floor, and basement. 

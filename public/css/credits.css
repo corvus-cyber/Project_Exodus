@@ -24,48 +24,50 @@
     color: #888888;
     width: 100%;
     height: 100%;
-    margin: 50px 0 0 50px;
+    margin: 50px 0 50px 0;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     font-family: monospace;
     text-transform: uppercase;
     letter-spacing: 10px;
 }
 #credits dl {
-    margin: 0px auto;
+    margin: 0px 15%;
 }
 #credits dt {
     float: left;
     width: 260px;
     margin: 0;
     padding: 30px 0 0 0;
-    text-align: right;
-    font-family: "Arial Narrow", sans-serif;
-    font-size: 20px;
+    text-align: left;
+    font-family: "Arial Narrow", sans-serif !important;
+    font-size: 18px;
     clear:left;
 }
 #credits dd {
     width: 100%;
     margin: 0 0 0 280px;
     padding: 30px 0 0 0;
-    font-family: "Arial Black", sans-serif;
+    font-family: "Arial Black", sans-serif !important;
     font-weight: bold;
-    font-size: 20px;    
+    font-size: 20px;
+    text-align: left;    
 }
 #credits p {
     width: 508px;
-    margin: 10px 0px 10px 60px;
+    margin: 10px auto;
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif !important;
     font-size: 20px;
+    letter-spacing: 0.4em;
 }
 #credits .fineprint {
-    color: #888888;
+    color: #b9b5b5;
     width: 100%;
-    margin: 80px 0 0 50px;
+    margin: 50px auto;
     text-align: center;
-    font-size: 10px;
-    font-family: Montserrat;
+    font-size: 12px;
+    font-family: sans-serif !important; 
 }
 .clearfix after {
     visibility: hidden;

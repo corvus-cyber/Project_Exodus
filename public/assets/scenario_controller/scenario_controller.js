@@ -138,8 +138,6 @@ function renderScenarioOpt() {
     optionVal = selectedOpt
     scenarioVal = scenarios[scenarioVal].options[optionVal].toScenario
 
-
-
     //if same, rerender options
     if (currentScen === scenarioVal) {
         //if statements here handle the actions outlined in the arrays contained in the scenarios themselves to make it easier to create no scenarios
@@ -174,13 +172,14 @@ function renderScenarioOpt() {
             });
 
         }
+        //--------------Handlers for the actions array in each option------------------
+        //the .includes() method searches a given array for a given value
 
         if (scenarios[currentScen].options[optionVal].actions.includes("heartBeat")) {
 
             //Place heartbeat que here
 
         }
-
 
         if (scenarios[currentScen].options[optionVal].actions.includes("winState")) {
             win();
@@ -238,11 +237,10 @@ function renderScenarioOpt() {
             return
         }
 
-
-
         if (scenarios[currentScen].options[optionVal].actions.includes("selfDestruct")) {
             scenarios[currentScen].options.splice(optionVal, 1)
         }
+        
         //button renderer
         for (let i = 0; i < scenarios[scenarioVal].options.length; i++) {
             //renders the title of the option and sets data value to that options v
@@ -264,17 +262,10 @@ function renderScenarioOpt() {
             scenarioOpti.insertAdjacentHTML("beforeend", opt);
         }
 
-
         let content;
         //without this the content will start with "undefined"
         content = "";
         //render text
-        // for (let i = 0; i < scenarios[scenarioVal].options.length; i++) {
-        //     //renders the title of the option and sets data value to that options v
-        //     let opt = `<button data=${i} type="button" class="btn btn-dark button-styling">${scenarios[scenarioVal].options[i].title} </button>`
-        //     scenarioOpti.insertAdjacentHTML("beforeend", opt);
-        // }
-
 
         $(scenarioDesc.children).remove();
         for (let i = 0; i < scenarios[scenarioVal].text.length; i++) {
@@ -312,17 +303,10 @@ function secondaryRender() {
         scenarioOpti.insertAdjacentHTML("beforeend", opt);
     }
 
-
     let content;
     //without this the content will start with "undefined"
     content = "";
     //render text
-    // for (let i = 0; i < scenarios[scenarioVal].options.length; i++) {
-    //     //renders the title of the option and sets data value to that options v
-    //     let opt = `<button data=${i} type="button" class="btn btn-dark button-styling">${scenarios[scenarioVal].options[i].title} </button>`
-    //     scenarioOpti.insertAdjacentHTML("beforeend", opt);
-    // }
-
 
     $(scenarioDesc.children).remove();
     for (let i = 0; i < scenarios[scenarioVal].text.length; i++) {

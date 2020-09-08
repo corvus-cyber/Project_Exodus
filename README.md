@@ -48,6 +48,7 @@ Retro is having a comeback. We see it in clothing, in film, in music, why not ga
 
 ## Future_Development
 * One thing that we'd like to accomplish with future iterations of this application is to expand out the house. Due to us only having two weeks to accomplish this project we focused on only five rooms to prove the concept. To flesh out the story we'd like to have over twenty rooms, situated in an upstairs, main floor, and basement. 
+* A couple features we'd like to add in the future are, an inventory system, and a health system with healing items.
 
 ## Wireframe:
 ![Img of the wireframe](./public/assets/screenshots/exodus-wireframe.png)

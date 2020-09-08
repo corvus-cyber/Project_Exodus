@@ -34,7 +34,7 @@ Retro is having a comeback. We see it in clothing, in film, in music, why not ga
 
 ## Issues_And_Resolutions 
 - With the front end we had a lot of complicated css effects occuring at the same time on different objects or lines of text, and sometimes these effects could interfere with one another. In order to fix this we had to seperate a lot of the effects into seperate css files and only allow for the effects to be trigged in certain instances with javascript. 
-- 
+- Making sure the Continous Integration and Continous Deployment process was not interrupted with every commit was a big learning curve.Merging only the final and fully functional codes to the master branch was very critical to make sure CI is occuring smoothly. 
 
 ## Credits 
 * Aakhya Signh for creating the typewriter css and js effect:

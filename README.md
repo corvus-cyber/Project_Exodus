@@ -61,6 +61,18 @@ So that I can post my score when reaching the end.
     - [Link to Codepen](https://codepen.io/geoffgraham/pen/yLywVbW)
 * Tremaine Eto for explaining how to create a fade in and out effect with css:
     - [Link to Website](https://medium.com/cloud-native-the-gathering/how-to-use-css-to-fade-in-and-fade-out-html-text-and-pictures-f45c11364f08)
+* Daniel Malkafly for creating the end credits scroll:
+    - [Link to GitHub](https://github.com/malkafly/endcredits)
+* Fesliyan Music for background music (Track Name: Monsters in the Field):
+    - [Link to Website](https://www.fesliyanstudios.com/royalty-free-music/downloads-c/scary-horror-music/8)
+* Background Music: Unseen Horrors Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/:
+    - [Link to Website](https://incompetech.com/music/royalty-free/index.html?genre=horror&page=1)
+* Fesliyan Music for background music (Track Name: Monsters in the Field):
+    - [Link to Website](https://www.fesliyanstudios.com/royalty-free-music/downloads-c/scary-horror-music/8)
+* freesoundeffects.com for the heartbeat effect:
+    - [Link to Website](https://www.freesoundeffects.com/free-sounds/scary-and-horror-10085/)
 
 ## Issues_And_Resolutions 
 - With the front end we had a lot of complicated css effects occuring at the same time on different objects or lines of text, and sometimes these effects could interfere with one another. In order to fix this we had to seperate a lot of the effects into seperate css files and only allow for the effects to be trigged in certain instances with javascript. 

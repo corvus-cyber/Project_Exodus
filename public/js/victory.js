@@ -36,7 +36,7 @@ $(document).ready(function () {
         var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
 
         $(ele).hide().appendTo("#scenPara_" + i + "").each(function (i) {
-            $(this).delay(50 * i).css({
+            $(this).delay(25 * i).css({
                 display: 'inline',
                 opacity: 0,
             }).animate({

@@ -108,7 +108,7 @@ function win() {
         var ele = '<span>' + winC.split('').join('</span><span>') + '</span>';
 
         $(ele).hide().appendTo("#scenPara_" + i + "").each(function (i) {
-            $(this).delay(50 * i).css({
+            $(this).delay(25 * i).css({
                 display: 'inline',
                 opacity: 0,
             }).animate({
@@ -162,7 +162,7 @@ function renderScenarioOpt() {
             var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
 
             $(ele).hide().appendTo("#scenPara_" + i + "").each(function (i) {
-                $(this).delay(50 * i).css({
+                $(this).delay(25 * i).css({
                     display: 'inline',
                     opacity: 0,
                 }).animate({
@@ -201,7 +201,7 @@ function renderScenarioOpt() {
                 var kill = "You launch yourself at the doctor, scalpel in hand. With a growl, you slash at his back, opening a wide gash. The doctor turns you look at you, bloodshot eyes blazing with rage. He knocks the scalpel from your hand and kicks you in the stomach. You double over, falling backwards. The doctor grabs a pair of scissors from the table, leaps on top of you and begins stabbing you over and over..."
                 var ele = '<span>' + kill.split('').join('</span><span>') + '</span>';
                 $(ele).hide().appendTo("#scDesc").each(function (i) {
-                    $(this).delay(50 * i).css({
+                    $(this).delay(25 * i).css({
                         display: 'inline',
                         opacity: 0,
                     }).animate({
@@ -279,7 +279,7 @@ function renderScenarioOpt() {
             var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
 
             $(ele).hide().appendTo("#scenPara_" + i + "").each(function (i) {
-                $(this).delay(50 * i).css({
+                $(this).delay(25 * i).css({
                     display: 'inline',
                     opacity: 0,
                 }).animate({
@@ -320,7 +320,7 @@ function secondaryRender() {
         var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
 
         $(ele).hide().appendTo("#scenPara_" + i + "").each(function (i) {
-            $(this).delay(50 * i).css({
+            $(this).delay(25 * i).css({
                 display: 'inline',
                 opacity: 0,
             }).animate({

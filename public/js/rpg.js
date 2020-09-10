@@ -15,7 +15,7 @@ $(document).ready(function() {
 
     //console.log(ele)
     $(ele).hide().appendTo(".description").each(function (i) {
-        $(this).delay(50 * i).css({
+        $(this).delay(25 * i).css({
             display: 'inline',
             opacity: 0,
         }).animate({

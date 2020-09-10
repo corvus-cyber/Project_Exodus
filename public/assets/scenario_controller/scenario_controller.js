@@ -178,7 +178,8 @@ function renderScenarioOpt() {
         if (scenarios[currentScen].options[optionVal].actions.includes("heartBeat")) {
 
             //Place heartbeat que here
-
+            let heartBeat = new Audio ('../assets/sounds/heartbeat.mp3');
+            heartBeat.play();
         }
 
         if (scenarios[currentScen].options[optionVal].actions.includes("winState")) {
